@@ -45,7 +45,6 @@
     </style>
 </head>
 <body class="text-slate-800 flex flex-col selection:bg-[#38A2D7] selection:text-white">
-
     <!-- Header Navigation -->
     <header class="glass-card sticky top-0 z-50 border-b border-white/20">
         <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
@@ -87,12 +86,10 @@
                 <h2 class="text-base font-bold mb-3 text-[#561139] flex items-center gap-2">
                     <span>🏢</span> <span id="sidebarHeader">قائمة المعايير (Menu)</span>
                 </h2>
-
                 <!-- Live Search Box -->
                 <div class="mb-4">
                     <input type="text" id="searchInput" oninput="handleSearch()" placeholder="بحث باسم أو رقم المعيار..." class="w-full px-3 py-2 rounded-xl text-xs bg-white/90 border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#38A2D7] transition-all">
                 </div>
-
                 <!-- Navigation List -->
                 <div class="space-y-2 max-h-[460px] overflow-y-auto pr-1" id="standardsNav">
                     <!-- Dynamic Nav -->
@@ -134,33 +131,125 @@
                 entriesTitle: "📝 القيود المحاسبية النموذجية (Journal Entries)",
                 homePage: {
                     welcomeTitle: "مرحباً بكِ في واحة المعايير المحاسبية المتقدمة",
-                    welcomeDesc: "منصة تعليمية وتطبيقية متكاملة تدمج بين الشرح الأكاديمي المبسط، القيود المحاسبية الصريحة، والحاسبات المالية التفاعلية لكل معيار دولي.",
-                    featuresTitle: "مميزات التحديث الجديد التطبيقي:",
+                    welcomeDesc: "منصة تعليمية وتطبيقية متكاملة تدمج بين الشرح الأكاديمي المفصل، المبادئ والمعادلات المحاسبية، القيود الصريحة، والحاسبات المالية التفاعلية لكل معيار دولي.",
+                    featuresTitle: "مميزات التحديث الجديد التطبيقي الشامل:",
                     feature1Title: "حاسبة رقمية تفاعلية",
                     feature1Desc: "إدخال أرقام حية وحساب الإهلاك، الهبوط، الخسائر الائتمانية، والقيمة الحالية فورياً.",
-                    feature2Title: "قيود محاسبية صريحة",
-                    feature2Desc: "عرض كامل لقيود اليومية (من حـ / إلى حـ) مع المبالغ والأوصاف الدقيقة.",
+                    feature2Title: "قيود وتفاصيل واضحة",
+                    feature2Desc: "عرض كامل لقيود اليومية (من حـ / إلى حـ) مع المبادئ التفصيلية لكل معيار.",
                     feature3Title: "تصفية ومتابعة تقدم",
                     feature3Desc: "شريط بحث سريع ومتابعة المعايير التي تم فهمها واستيعابها بنجاح.",
                     startPrompt: "اختاري معياراً من القائمة الجانبية أو استخدمي شريط البحث للبدء!"
                 },
                 standards: {
+                    ias1: {
+                        code: "IAS 1",
+                        name: "عرض القوائم المالية (Presentation of Financial Statements)",
+                        metaphor: "📊 المرآة التي تعكس الأداء المالي والمركز المالي للمنشأة بوضوح وشفافية.",
+                        objective: "تحديد الهيكل العام لتقديم القوائم المالية ذات الغرض العام لضمان القابلية للمقارنة مع الفترات السابقة أو الشركات الأخرى.",
+                        explanation: "يضمن المعيار تقديم صورة عادلة عبر القوائم المالية الخمس الرئيسية: المركز المالي، الدخل الشامل، التغيرات في حقوق الملكية، التدفقات النقدية، والإيضاحات المتممة. ويعتمد المعيار بشكل أساسي على مبدأ عدم المقاصة والتمييز بين العناصر المتداولة وغير المتداولة.",
+                        measurementTitle: "الأركان والمبادئ المحاسبية الأساسية:",
+                        measurementDetails: [
+                            "الاستمرارية (Going Concern): افتراض أن المنشأة مستمرة في نشاطها في المستقبل القريب.",
+                            "أساس الاستحقاق (Accrual Basis): تسجيل العمليات عند حدوثها وليس عند القبض أو الدفع النقدي.",
+                            "التبويب: الفصل الواضح بين الأصول والالتزامات المتداولة (خلال سنة/دورة تشغيلية) وغير المتداولة."
+                        ],
+                        stepsTitle: "خطوات المعالجة والعرض في القوائم:",
+                        steps: [
+                            "تبويب الحسابات في ميزان المراجعة إلى متداولة وغير متداولة.",
+                            "تجميع عناصر الإيرادات والمصروفات حسب الطبيعة أو الوظيفة للوصول لصافي الربح.",
+                            "إعداد الإيضاحات المتممة والسياسات المحاسبية المتبعة."
+                        ],
+                        exampleTitle: "مثال تطبيقي للقيود والحاسبة:",
+                        exampleText: "تجميع الأصول المتداولة (نقدية + ذمم) والالتزامات المتداولة (دائنون) لحساب رأس المال العامل ونسبة التداول.",
+                        entries: [
+                            {
+                                title: "1. قيد إقفال الإيرادات والمصروفات في نهاية الفترة:",
+                                debit: "من حـ/ إيراد المبيعات",
+                                credit: "إلى حـ/ ملخص الدخل (الأرباح والخسائر)",
+                                amount: "100,000 $",
+                                note: "إقفال إجمالي الإيرادات الدورية في حساب ملخص الدخل"
+                            }
+                        ],
+                        calcType: "ias1"
+                    },
+                    ias2: {
+                        code: "IAS 2",
+                        name: "المخزون (Inventories)",
+                        metaphor: "📦 مستودع بضائع نشتري ونبيع منه طوال السنة مع تطبيق قاعدة الحيطة والحذر.",
+                        objective: "معالجة قياس وإثبات المخزون كأصل وتحديد التكلفة التي تُحمل كمصروف (تكلفة المبيعات) عند الاعتراف بالإيراد المقابل.",
+                        explanation: "يُقاس المخزون بالتكلفة أو صافي القيمة القابلة للتحقق (NRV) أيهما أقل لضمان عدم إظهار الأصول بقيمة أعلى من قيمتها المستردة المتوقعة.",
+                        measurementTitle: "قاعدة التقييم والمعادلة الرئيسية:",
+                        measurementDetails: [
+                            "صافي القيمة القابلة للتحقق (NRV) = سعر البيع المقدر - التكاليف اللازمة لإتمام البيع والتسويق.",
+                            "إذا كانت الـ NRV أقل من التكلفة، نثبت خسارة انخفاض (هبوط أسعار مخزون) فورية بالفرق."
+                        ],
+                        stepsTitle: "خطوات التقييم المحاسبي للمخزون:",
+                        steps: [
+                            "حساب تكلفة الشراء والتجهيز المباشرة للمخزون.",
+                            "تقدير سعر البيع وخصم كافة مصاريف البيع والتجهيز للوصول لـ NRV.",
+                            "مقارنة التكلفة بـ NRV واختيار الأقل للتسجيل في الميزانية، مع إثبات مخصص الهبوط إن وجد."
+                        ],
+                        exampleTitle: "مثال تطبيقي للقيود والحاسبة:",
+                        exampleText: "مخزون تكلفتها 50,000$، وسعر بيعه المتوقع 45,000$ وتكاليف بيعه 3,000$ (الـ NRV الصافي = 42,000$). الخسارة = 8,000$.",
+                        entries: [
+                            {
+                                title: "1. قيد إثبات انخفاض قيمة المخزون إلى صافي القيمة القابلة للتحقق (NRV):",
+                                debit: "من حـ/ خسائر هبوط أسعار المخزون (قائمة الدخل)",
+                                credit: "إلى حـ/ مخصص هبوط أسعار المخزون (أو المخزون)",
+                                amount: "8,000 $",
+                                note: "الفرق بين التكلفة (50,000$) وصافي القيمة القابلة للتحقق (42,000$)"
+                            }
+                        ],
+                        calcType: "ias2"
+                    },
+                    ias7: {
+                        code: "IAS 7",
+                        name: "قائمة التدفقات النقدية (Statement of Cash Flows)",
+                        metaphor: "💧 تدفق شريان الحياة المالي داخل وخارج الشركة عبر أنشطتها الثلاثة.",
+                        objective: "توفير معلومات عن التغيرات التاريخية في النقدية وما يعادلها من خلال تصنيف التدفقات النقدية حسب مصدرها واستخدامها.",
+                        explanation: "يتم تقسيم التدفقات النقدية بشكل صريح إلى ثلاثة أنشطة: تشغيلية (النشاط الرئيسي)، استثمارية (الأصول طويلة الأجل)، وتمويلية (القروض وحقوق الملكية).",
+                        measurementTitle: "طرق العرض والتصنيف المحاسبي:",
+                        measurementDetails: [
+                            "الأنشطة التشغيلية (Operating): الأنشطة المولدة للإيراد وتستخدم إما الطريقة المباشرة أو غير المباشرة.",
+                            "الطريقة غير المباشرة: تعديل صافي الربح بالبنود غير النقدية (مثل الإهلاك) والتغيرات في رأس المال العامل."
+                        ],
+                        stepsTitle: "خطوات إعداد قائمة التدفقات النقدية:",
+                        steps: [
+                            "إعادة إضافة المصروفات غير النقدية (مثل الإهلاك والإطفاء) لصافي الربح.",
+                            "تعديل التغيرات في الذمم المدينة والمخزون والدائنين.",
+                            "إضافة أو خصم المقبوضات والمدفوعات النقدية للاستثمار والتمويل."
+                        ],
+                        exampleTitle: "مثال تطبيقي للقيود والحاسبة:",
+                        exampleText: "صافي ربح 50,000$ + إهلاك 10,000$ - زيادة في الذمم المدينة 5,000$ = تدفق تشغيلي 55,000$.",
+                        entries: [
+                            {
+                                title: "1. قيد تسوية الإهلاك في الطريقة غير المباشرة للتدفقات النقدية:",
+                                debit: "من حـ/ التدفقات النقدية من النشاط التشغيلي (تسويات غير نقدية)",
+                                credit: "إلى حـ/ مصروف الإهلاك (إعادة إضافة عنصر غير نقدي)",
+                                amount: "10,000 $",
+                                note: "إعادة إضافة الإهلاك إلى صافي الربح لأنه مصروف غير نقدي"
+                            }
+                        ],
+                        calcType: "ias7"
+                    },
                     ias16: {
                         code: "IAS 16",
                         name: "الممتلكات والآلات والمعدات (PPE)",
                         metaphor: "🏭 مصنع وخط إنتاج ثقيل يخدم المنشأة لعدة سنوات مالية.",
-                        objective: "رأسمالة تكلفة الأصول الملموسة واستهلاكها على مدار عمرها الإنتاجي.",
-                        explanation: "نجمع كافة مصاريف اقتناء وتجهيز الأصل لرأسمالتها في المركز المالي، ثم نقوم بإهلاكها تدريجياً كمصروف دوري.",
-                        measurementTitle: "طرق القياس الأساسية:",
+                        objective: "رأسمالة تكلفة الأصول الملموسة واستهلاكها على مدار عمرها الإنتاجي المتبقي.",
+                        explanation: "تجمع كافة مصاريف اقتناء الأصل المباشرة وتجهيزه حتى يصبح جاهزاً للاستخدام لتظهر كأصل ثابت، ثم نقوم بإهلاكها تدريجياً كمصروف دوري لمقابلة الإيرادات.",
+                        measurementTitle: "شروط الرأسمالة والقياس:",
                         measurementDetails: [
-                            "القياس الأولي: التكلفة الإجمالية (سعر الشراء + الشحن + التركيب + التجهيز).",
-                            "القياس اللاحق: اختيار إما نموذج التكلفة أو نموذج إعادة التقييم."
+                            "تأكد من تدفق منافع اقتصادية مستقبلية للشركة وإمكانية قياس التكلفة بموثوقية.",
+                            "القياس الأولي: التكلفة الإجمالية (سعر الشراء + الشحن + الجمارك + التركيب وتكاليف الموقع).",
+                            "القياس اللاحق: اختيار إما نموذج التكلفة (التكلفة - مجمع الإهلاك) أو نموذج إعادة التقييم."
                         ],
-                        stepsTitle: "خطوات التفكير والحل:",
+                        stepsTitle: "خطوات التفكير والتطبيقي المحاسبي:",
                         steps: [
-                            "التحقق من توفر شروط إثبات الأصل والمنافع المستقبلية.",
-                            "تجميع التكلفة الأوليّة ورأسمالتها.",
-                            "تحديد العمر الإنتاجي وقيمة الخردة وحساب قسط الإهلاك السنوي."
+                            "تجميع كافة التكاليف الأولية المباشرة ورأسمالتها في حساب الأصل.",
+                            "تحديد العمر الإنتاجي وقيمة الخردة المقدرة.",
+                            "احتساب قسط الإهلاك السنوي وتسجيل قيد التسوية الدورية."
                         ],
                         exampleTitle: "مثال تطبيقي للقيود والحاسبة:",
                         exampleText: "شراء خط إنتاج بـ 100,000$ + 5,000$ نقل + 5,000$ تركيب. العمر الإنتاجي 5 سنوات بدون خردة.",
@@ -177,57 +266,27 @@
                                 debit: "من حـ/ مصروف إهلاك آلات ومعدات",
                                 credit: "إلى حـ/ مجمع إهلاك آلات ومعدات",
                                 amount: "22,000 $",
-                                note: "تحميل قائمة الدخل بالقسط السنوي (110,000 / 5 سنوات)"
+                                note: "تحميل قائمة الدخل بالقسط السنوي (110,000 $ / 5 سنوات)"
                             }
                         ],
                         calcType: "ias16"
                     },
-                    ias2: {
-                        code: "IAS 2",
-                        name: "المخزون (Inventories)",
-                        metaphor: "📦 مستودع بضائع نشتري ونبيع منه طوال السنة.",
-                        objective: "تقييم المخزون في نهاية الفترة وتطبيق قاعدة الحيطة والحذر.",
-                        explanation: "يُقاس المخزون بالتكلفة أو صافي القيمة القابلة للتحقق (NRV) أيهما أقل لضمان عدم تضخيم الأصول.",
-                        measurementTitle: "قاعدة التقييم والقياس:",
-                        measurementDetails: [
-                            "صافي القيمة القابلة للتحقق (NRV) = سعر البيع المقدر - التكاليف اللازمة لإتمام البيع.",
-                            "إذا كانت الـ NRV أقل من التكلفة، نثبت خسارة انخفاض فورية."
-                        ],
-                        stepsTitle: "خطوات المعالجة المحاسبية:",
-                        steps: [
-                            "حساب تكلفة شراء وتجهيز المخزون.",
-                            "تقدير سعر البيع وخصم مصاريف البيع للوصول لـ NRV.",
-                            "تسجيل القيد بالخسارة إن وجدت وإثبات المخصص."
-                        ],
-                        exampleTitle: "مثال تطبيقي للقيود والحاسبة:",
-                        exampleText: "مخزون تكلفتها 50,000$، وسعر بيعه المتوقع 45,000$ وتكاليف بيعه 3,000$ (الـ NRV الصافي = 42,000$).",
-                        entries: [
-                            {
-                                title: "1. قيد إثبات انخفاض قيمة المخزون إلى NRV:",
-                                debit: "من حـ/ خسائر هبوط أسعار المخزون (قائمة الدخل)",
-                                credit: "إلى حـ/ مخصص هبوط أسعار المخزون (أو المخزون)",
-                                amount: "8,000 $",
-                                note: "الفرق بين التكلفة (50,000$) و صافي القيمة القابلة للتحقق (42,000$)"
-                            }
-                        ],
-                        calcType: "ias2"
-                    },
                     ias38: {
                         code: "IAS 38",
                         name: "الأصول غير الملموسة (Intangible Assets)",
-                        metaphor: "💡 براءة اختراع أو برنامج إلكتروني يولد منافع بلا كيان مادي.",
-                        objective: "التمهيد بين مصاريف البحث (مصروف) ومصاريف التطوير (أصل غير ملموس).",
-                        explanation: "مرحلة البحث تُحمل كمصروف فوراً، بينما مرحلة التطوير تُستوفى شروطها لتُرسمل كأصل غير ملموس يُستهلك على عمره.",
-                        measurementTitle: "فلسفة القياس والتمهيد:",
+                        metaphor: "💡 براءة اختراع أو برنامج إلكتروني يولد منافع اقتصادية بلا كيان مادي.",
+                        objective: "التمييز الدقيق بين مصاريف البحث (مصروف) ومصاريف التطوير (أصل غير ملموس).",
+                        explanation: "مرحلة البحث تُحمل كمصروف فوراً في قائمة الدخل لعدم التيقن، بينما مرحلة التطوير إذا استوفت شروط الجدوى تُرسمل كأصل غير ملموس يُستهلك (يطفأ) على عمره الإنتاجي.",
+                        measurementTitle: "فلسفة التمييز بين البحث والتطوير:",
                         measurementDetails: [
-                            "مرحلة البحث (Research): مصروف في قائمه الدخل مباشرة.",
-                            "مرحلة التطوير (Development): أصل غير ملموس يطفأ (Amortized) دورياً."
+                            "مرحلة البحث (Research): مصروف في قائمة الدخل مباشرة فور حدوثها.",
+                            "مرحلة التطوير (Development): أصل غير ملموس يُرسمل وُيطفأ (Amortized) دورياً عند توفر الجدوى الفنية والمالية."
                         ],
-                        stepsTitle: "خطوات تطبيق المعيار:",
+                        stepsTitle: "خطوات المعالجة المحاسبية:",
                         steps: [
-                            "فصل تكاليف البحث عن التطوير.",
-                            "رأسمالة تكاليف التطوير المستوفية للشروط.",
-                            "حساب قسط الإطفاء السنوي للأصل."
+                            "فصل تكاليف مرحلة البحث عن تكاليف مرحلة التطوير.",
+                            "تحميل البحث للمصاريف ورأسمالة التطوير المستوفي للشروط.",
+                            "حساب قسط الإطفاء السنوي وتسجيله بانتظام."
                         ],
                         exampleTitle: "مثال تطبيقي للقيود والحاسبة:",
                         exampleText: "أنفقت شركة 20,000$ بحثاً و 80,000$ تطويراً لبرنامج بعمر إنتاجي 4 سنوات.",
@@ -237,33 +296,63 @@
                                 debit: "من مذكورين:\n  حـ/ مصروفات بحث (قائمة الدخل) : 20,000$\n  حـ/ أصل غير ملموس - برنامج إلكتروني : 80,000$",
                                 credit: "إلى حـ/ البنك / النقدية",
                                 amount: "100,000 $",
-                                note: "تحميل البحث كمصروف ورأسمالة التطوير"
+                                note: "تحميل البحث كمصروف ورأسمالة التطوير المكتمل"
                             },
                             {
                                 title: "2. قيد إطفاء البرنامج السنوي (Amortization):",
                                 debit: "من حـ/ مصروف إطفاء أصول غير ملموسة",
                                 credit: "إلى حـ/ مجمع إطفاء أصول غير ملموسة",
                                 amount: "20,000 $",
-                                note: "إطفاء السنوية (80,000 / 4 سنوات)"
+                                note: "إطفاء السنوية (80,000 $ / 4 سنوات)"
                             }
                         ],
                         calcType: "ias38"
                     },
+                    ifrs9: {
+                        code: "IFRS 9",
+                        name: "الأدوات المالية (Financial Instruments)",
+                        metaphor: "⚖️ خزنة وميزان دقيق لقياس المخاطر والخسائر الائتمانية المتوقعة.",
+                        objective: "التنبؤ المبكر بالخسائر الائتمانية المتوقعة (ECL) واحتساب المخصص فوراً دون انتظار التعثر.",
+                        explanation: "يعتمد المعيار نموذج الخسائر الائتمانية المتوقعة الاستباقي للحد من المخاطر المالية وتكوين المخصص بناءً على احتمالات التعثر المحددة.",
+                        measurementTitle: "نموذج الخسائر الائتمانية المتوقعة (ECL) ومعادلته:",
+                        measurementDetails: [
+                            "ECL = حجم التعرض الائتماني (Exposure) × احتمال التعثر (PD) × نسبة الخسارة عند التعثر (LGD).",
+                            "إثبات المخصص فوراً في قائمة الدخل كتحوط للمستقبل."
+                        ],
+                        stepsTitle: "خطوات التقييم المحاسبي:",
+                        steps: [
+                            "تحديد حجم التعرض الائتماني (الذمم المدينة أو القروض).",
+                            "تطبيق نسبة احتمال التعثر ونسبة الخسارة المتوقعة.",
+                            "إثبات قيد مخصص الخسائر الائتمانية المتوقعة."
+                        ],
+                        exampleTitle: "مثال تطبيقي للقيود والحاسبة:",
+                        exampleText: "ذمم مدينة بـ 200,000$، احتمال التعثر 5% ونسبة الخسارة المتوقعة 80%. الخسارة المتوقعة = 8,000$.",
+                        entries: [
+                            {
+                                title: "1. قيد إثبات مخصص الخسائر الائتمانية المتوقعة (ECL):",
+                                debit: "من حـ/ مصروف خسائر ائتمانية متوقعة (قائمة الدخل)",
+                                credit: "إلى حـ/ مخصص خسائر ائتمانية متوقعة (يخصم من الأصول/الذمم)",
+                                amount: "8,000 $",
+                                note: "احتساب استباقي لمواجهة مخاطر التعثر المستقبلية"
+                            }
+                        ],
+                        calcType: "ifrs9"
+                    },
                     ifrs15: {
                         code: "IFRS 15",
                         name: "الإيرادات من العقود مع العملاء",
-                        metaphor: "🏬 عقد متعدد الالتزامات ونقل السيطرة التدريجي أو الفوري.",
-                        objective: "الاعتراف بالإيراد عند نقل السيطرة وبمبالغ مخصصة حسب قيمها المنفصلة.",
-                        explanation: "تطبيق النموذج الخماسي لتحديد سعر المعاملة وتخصيصه على التزامات الأداء بشكل عادل.",
-                        measurementTitle: "نموذج الخطوات الخمس للقياس:",
+                        metaphor: "🏬 عقد متعدد الالتزامات ونقل السيطرة التدريجي أو الفوري للعميل.",
+                        objective: "الاعتراف بالإيراد بمبالغ تعكس المقابل المنتظر عند انتقال السيطرة على السلع أو الخدمات.",
+                        explanation: "تطبيق النموذج الخماسي الشامل لتحديد وتوزيع سعر المعاملة على كافة التزامات الأداء بشكل عادل وبناءً على الأسعار المنفصلة.",
+                        measurementTitle: "النموذج الخماسي للقياس (5-Step Model):",
                         measurementDetails: [
-                            "1. تحديد العقد 2. تحديد التزامات الأداء 3. تحديد سعر المعاملة 4. تخصيص السعر 5. الاعتراف بالإيراد."
+                            "1. تحديد العقد 2. تحديد التزامات الأداء المنفصلة 3. تحديد سعر المعاملة 4. تخصيص سعر المعاملة 5. الاعتراف بالإيراد عند انتقال السيطرة."
                         ],
-                        stepsTitle: "طريقة التخصيص والحل:",
+                        stepsTitle: "طريقة التخصيص والحل المحاسبي:",
                         steps: [
-                            "جمع الأسعار البيعية المنفصلة للالتزامات.",
+                            "جمع الأسعار البيعية المنفصلة للالتزامات المستقلة.",
                             "حساب النسبة المئوية لكل التزام من الإجمالي.",
-                            "تخصيص سعر العقد الفعلي بناءً على هذه النسب."
+                            "تخصيص سعر العقد المجمع الفعلي وفق هذه النسب وإثبات الإيرادات والمؤجلات."
                         ],
                         exampleTitle: "مثال تطبيقي للقيود والحاسبة:",
                         exampleText: "بيع جهاز بـ 800$ وصيانة بـ 200$ بعقد شامل بـ 900$. يتم تخصيص السعر نسبيًا.",
@@ -271,7 +360,7 @@
                             {
                                 title: "1. قيد إثبات تحصيل العقد الشامل وتسليم الجهاز فوراً:",
                                 debit: "من حـ/ البنك",
-                                credit: "إلى مذكورين:\n  حـ/ إيراد مبيعات أجهزة (تم السيطرة عليها) : 720$\n  حـ/ إيراد خدمات مؤجل (التزام عقد) : 180$",
+                                credit: "إلى مذكورين:\n  حـ/ إيراد مبيعات أجهزة (تم نقل السيطرة) : 720$\n  حـ/ إيراد خدمات مؤجل - التزام عقد (صيانة مستقبلي) : 180$",
                                 amount: "900 $",
                                 note: "تخصيص المبلغ بنسبة (80% أجهزة و 20% صيانة)"
                             }
@@ -281,75 +370,45 @@
                     ifrs16: {
                         code: "IFRS 16",
                         name: "عقود الإيجار (Leases)",
-                        metaphor: "🔑 استئجار مبنى وإظهاره بالميزانية كأصل التزام متقابل.",
-                        objective: "إلغاء حيلة الإيجار التشغيلي وإظهار أصل حق الاستخدام والالتزام المالي.",
-                        explanation: "يُحسب التزام الإيجار بالقيمة الحالية للدفعات المستقبلية، ويُسجل أصل حق الاستخدام (RoU) بنفس القيمة.",
+                        metaphor: "🔑 استئجار عقار/أصل وإظهاره بالميزانية كأصل والتزام متقابلين.",
+                        objective: "إلغاء الإيجار التشغيلي خارج الميزانية وإظهار أصل حق الاستخدام والالتزام المالي المقابل بوضوح.",
+                        explanation: "يُلزم المستأجر بحساب القيمة الحالية للأقساط المستقبلية وتسجيلها كـ **أصل حق استخدام (RoU Asset)** و**التزام عقد إيجار (Lease Liability)**.",
                         measurementTitle: "معادلة القيمة الحالية والأصل:",
                         measurementDetails: [
-                            "التزام الإيجار = القيمة الحالية للأقساط (PV of Lease Payments).",
+                            "التزام الإيجار = القيمة الحالية للأقساط (Present Value of Lease Payments).",
                             "أصل حق الاستخدام = التزام الإيجار + التكاليف المباشرة الأولية."
                         ],
-                        stepsTitle: "خطوات التثبيت بالدفاتر:",
+                        stepsTitle: "خطوات التثبيت والمعالجة الدورية:",
                         steps: [
-                            "حساب القيمة الحالية بمعدل الخصم.",
-                            "إثبات الأصل والالتزام بنفس القيمة.",
-                            "حساب الفائدة الدورية وإهلاك الأصل."
+                            "حساب القيمة الحالية للأقساط باستخدام معدل الخصم الضمني.",
+                            "إثبات الأصل والالتزام بنفس القيمة الحالية في بداية العقد.",
+                            "إهلاك الأصل خطياً واحتساب الفائدة التمويلية الدورية على الالتزام."
                         ],
                         exampleTitle: "مثال تطبيقي للقيود والحاسبة:",
                         exampleText: "إيجار مبنى بـ 30,000$ سنوياً لمدة 3 سنوات بمعدل فائدة 8%. القيمة الحالية تحسب بـ 77,313$.",
                         entries: [
                             {
-                                title: "1. قيد الاعتراف الأولي بعقد الإيجار:",
+                                title: "1. قيد الاعتراف الأولي بعقد الإيجار (البداية):",
                                 debit: "من حـ/ أصل حق الاستخدام (RoU Asset)",
                                 credit: "إلى حـ/ التزام عقود الإيجار (Lease Liability)",
                                 amount: "77,313 $",
-                                note: "إثبات القيمة الحالية لإجمالي دفعات الإيجار"
+                                note: "إثبات القيمة الحالية لإجمالي دفعات الإيجار المستقبلية"
                             },
                             {
                                 title: "2. قيد مصروف الفائدة وإهلاك أصل حق الاستخدام للسنة الأولى:",
                                 debit: "من مذكورين:\n  حـ/ مصروف إهلاك أصل حق الاستخدام : 25,771$\n  حـ/ مصروف فائدة عقد إيجار : 6,185$",
                                 credit: "إلى مذكورين:\n  حـ/ مجمع إهلاك أصل حق الاستخدام : 25,771$\n  حـ/ التزام عقود الإيجار (فائدة مستحقة) : 6,185$",
                                 amount: "31,956 $",
-                                note: "معالجة الإهلاك والفائدة الدورية"
+                                note: "معالجة الإهلاك الخطي والفائدة الدورية على الالتزام"
                             }
                         ],
                         calcType: "ifrs16"
-                    },
-                    ifrs9: {
-                        code: "IFRS 9",
-                        name: "الأدوات المالية (Financial Instruments)",
-                        metaphor: "⚖️ خزنة وميزان دقيق لقياس المخاطر والخسائر الائتمانية المتوقعة.",
-                        objective: "التنبؤ المبكر بالخسائر الائتمانية (ECL) واحتساب المخصص فوراً.",
-                        explanation: "عدم الانتظار لحين وقوع التعثر، بل احتساب مخصص خسائر متوقعة استباقياً بناءً على احتمالات التعثر (PD) وحجم الخسارة (LGD).",
-                        measurementTitle: "نموذج الخسائر الائتمانية المتوقعة (ECL):",
-                        measurementDetails: [
-                            "ECL = القيمة التعاقدية (Exposure) × احتمال التعثر (PD) × نسبة الخسارة عند التعثر (LGD).",
-                            "تسجيل المخصص في قائمة الدخل فور تقديم القرض أو الدين."
-                        ],
-                        stepsTitle: "خطوات التقييم المحاسبي:",
-                        steps: [
-                            "تحديد حجم التعرض الائتماني (المدينون أو القروض).",
-                            "تطبيق مصفوفة المخصص باحتمال التعثر.",
-                            "إثبات قيد مخصص الخسائر الائتمانية."
-                        ],
-                        exampleTitle: "مثال تطبيقي للقيود والحاسبة:",
-                        exampleText: "ذمم مدينة بـ 200,000$، احتمال التعثر 5% ونسبة الخسارة المتوقعة 80%. الخسارة المتوقعة = 8,000$.",
-                        entries: [
-                            {
-                                title: "1. قيد إثبات مخصص الخسائر الائتمانية المتوقعة (ECL):",
-                                debit: "من حـ/ مصروف خسائر ائتمانية متوقعة (قائمة الدخل)",
-                                credit: "إلى حـ/ مخصص خسائر ائتمانية متوقعة (ذمم مدينة / قروض)",
-                                amount: "8,000 $",
-                                note: "احتساب استباقي لمواجهة مخاطر التعثر المستقبلية"
-                            }
-                        ],
-                        calcType: "ifrs9"
                     }
                 }
             },
             en: {
                 mainTitle: "IFRS & IAS Financial City",
-                mainSubtitle: "Interactive Guide with Journal Entries & Financial Calculators",
+                mainSubtitle: "Interactive Guide with Detailed Explanations, Journal Entries & Financial Calculators",
                 sidebarHeader: "Standards Menu",
                 homeBtnText: "Home",
                 footerText: "Advanced Visual Guide to Financial Reporting Standards - Hudaiah Excellence",
@@ -360,33 +419,124 @@
                 entriesTitle: "📝 Standard Journal Entries",
                 homePage: {
                     welcomeTitle: "Welcome to the Advanced Accounting Oasis",
-                    welcomeDesc: "An integrated practical learning hub combining simplified explanations, explicit journal entries, and dynamic financial calculators.",
+                    welcomeDesc: "An integrated practical learning hub combining detailed academic explanations, accounting principles & formulas, explicit journal entries, and dynamic financial calculators.",
                     featuresTitle: "New Practical Features:",
                     feature1Title: "Interactive Calculator",
                     feature1Desc: "Live input values calculating depreciation, NRV impairment, ECL, and lease present values.",
-                    feature2Title: "Explicit Journal Entries",
-                    feature2Desc: "Full debits & credits with detailed descriptions and calculations.",
+                    feature2Title: "Explicit Explanations & Entries",
+                    feature2Desc: "Full debits & credits with deep conceptual breakdown for every standard.",
                     feature3Title: "Search & Progress Tracking",
                     feature3Desc: "Quick search and progress status for mastered standards.",
                     startPrompt: "Select a standard from the sidebar menu or use search to begin!"
                 },
                 standards: {
+                    ias1: {
+                        code: "IAS 1",
+                        name: "Presentation of Financial Statements",
+                        metaphor: "📊 Financial mirror clearly reflecting performance & position.",
+                        objective: "Ensure baseline structure and comparability across general purpose financial statements.",
+                        explanation: "Sets presentation requirements across 5 primary statements: Financial Position, Comprehensive Income, Equity Changes, Cash Flows, and Notes.",
+                        measurementTitle: "Key Principles:",
+                        measurementDetails: [
+                            "Going concern and accrual basis of accounting.",
+                            "Current vs non-current explicit classification.",
+                            "No offsetting of assets/liabilities unless permitted."
+                        ],
+                        stepsTitle: "Application Steps:",
+                        steps: [
+                            "Classify trial balance items into current and non-current.",
+                            "Aggregate revenues and expenses by function or nature.",
+                            "Prepare accompanying notes and accounting policies."
+                        ],
+                        exampleTitle: "Practical Example & Calculator:",
+                        exampleText: "Current Assets ($50,000) vs Current Liabilities ($15,000) working capital calculation.",
+                        entries: [
+                            {
+                                title: "1. Revenue & Expense Closing Entry:",
+                                debit: "Dr. Sales Revenue",
+                                credit: "Cr. Income Summary",
+                                amount: "$100,000",
+                                note: "Closing periodic revenues into income summary"
+                            }
+                        ],
+                        calcType: "ias1"
+                    },
+                    ias2: {
+                        code: "IAS 2",
+                        name: "Inventories",
+                        metaphor: "📦 Goods warehouse for buying and selling adhering to prudence.",
+                        objective: "Determine inventory valuation as an asset and its subsequent expense recognition upon sale.",
+                        explanation: "Value inventory at lower of cost and Net Realizable Value (NRV) to prevent overstating asset values.",
+                        measurementTitle: "Valuation Rule & Formula:",
+                        measurementDetails: [
+                            "NRV = Estimated Selling Price - Costs to Complete & Sell.",
+                            "Recognize immediate impairment loss if NRV < Cost."
+                        ],
+                        stepsTitle: "Treatment Steps:",
+                        steps: [
+                            "Determine total initial inventory cost.",
+                            "Estimate NRV by deducting selling expenses.",
+                            "Record impairment allowance entry if NRV is lower."
+                        ],
+                        exampleTitle: "Practical Example & Calculator:",
+                        exampleText: "Inventory cost $50,000, selling price $45,000, selling costs $3,000 (NRV = $42,000). Impairment = $8,000.",
+                        entries: [
+                            {
+                                title: "1. Inventory Write-Down to NRV Entry:",
+                                debit: "Dr. Loss on Inventory Write-Down (Income Statement)",
+                                credit: "Cr. Allowance for Inventory Write-Down",
+                                amount: "$8,000",
+                                note: "Difference between cost ($50,000) and NRV ($42,000)"
+                            }
+                        ],
+                        calcType: "ias2"
+                    },
+                    ias7: {
+                        code: "IAS 7",
+                        name: "Statement of Cash Flows",
+                        metaphor: "💧 Lifeline tracking cash inflows and outflows across 3 activities.",
+                        objective: "Provide historical cash flow information categorized by source and usage.",
+                        explanation: "Classifies cash flows into Operating (primary revenue), Investing (long-term assets), and Financing activities.",
+                        measurementTitle: "Presentation Methods:",
+                        measurementDetails: [
+                            "Direct Method: Discloses gross operating cash receipts and payments.",
+                            "Indirect Method: Adjusts net profit for non-cash items and working capital changes."
+                        ],
+                        stepsTitle: "Preparation Steps:",
+                        steps: [
+                            "Add back non-cash expenses (Depreciation/Amortization).",
+                            "Adjust working capital changes (AR, Inventory, AP).",
+                            "Incorporate investing & financing cash flows."
+                        ],
+                        exampleTitle: "Practical Example & Calculator:",
+                        exampleText: "Net profit $50,000 + Depreciation $10,000 - AR increase $5,000 = Operating Cash $55,000.",
+                        entries: [
+                            {
+                                title: "1. Depreciation Adjustment Entry (Indirect Method):",
+                                debit: "Dr. Cash Flow from Operating Activities (Adjustments)",
+                                credit: "Cr. Depreciation Expense (Add Back)",
+                                amount: "$10,000",
+                                note: "Adding back non-cash depreciation to net profit"
+                            }
+                        ],
+                        calcType: "ias7"
+                    },
                     ias16: {
                         code: "IAS 16",
                         name: "Property, Plant & Equipment (PPE)",
                         metaphor: "🏭 Factory and production line serving for multiple years.",
                         objective: "Capitalize tangible assets and depreciate them over their useful life.",
-                        explanation: "Sum all acquisition and preparation costs to capitalize on balance sheet, then depreciate over time.",
-                        measurementTitle: "Measurement Methods:",
+                        explanation: "Capitalize all initial direct purchase and preparation costs into the asset account, then depreciate over time.",
+                        measurementTitle: "Measurement Criteria:",
                         measurementDetails: [
-                            "Initial: Total Cost (Purchase + Shipping + Installation).",
-                            "Subsequent: Cost Model or Revaluation Model."
+                            "Initial Cost: Purchase Price + Freight + Customs + Setup costs.",
+                            "Subsequent Model: Cost Model or Revaluation Model."
                         ],
                         stepsTitle: "Step-by-Step Logic:",
                         steps: [
-                            "Verify asset recognition criteria.",
-                            "Capitalize initial purchase costs.",
-                            "Calculate annual depreciation expense."
+                            "Verify asset recognition criteria and future economic benefits.",
+                            "Capitalize initial purchase and setup costs.",
+                            "Determine useful life & salvage value for annual depreciation."
                         ],
                         exampleTitle: "Practical Example & Calculator:",
                         exampleText: "Machinery bought for $100,000 + $5,000 freight + $5,000 installation. Useful life 5 years.",
@@ -408,52 +558,22 @@
                         ],
                         calcType: "ias16"
                     },
-                    ias2: {
-                        code: "IAS 2",
-                        name: "Inventories",
-                        metaphor: "📦 Goods warehouse for buying and selling.",
-                        objective: "Inventory valuation adhering to prudence.",
-                        explanation: "Value inventory at lower of cost and Net Realizable Value (NRV).",
-                        measurementTitle: "Valuation Rule:",
-                        measurementDetails: [
-                            "NRV = Estimated Selling Price - Costs to Complete & Sell.",
-                            "Recognize impairment loss if NRV < Cost."
-                        ],
-                        stepsTitle: "Treatment Steps:",
-                        steps: [
-                            "Determine total inventory cost.",
-                            "Calculate NRV.",
-                            "Record impairment loss entry if needed."
-                        ],
-                        exampleTitle: "Practical Example & Calculator:",
-                        exampleText: "Inventory cost $50,000, selling price $45,000, selling costs $3,000 (NRV = $42,000).",
-                        entries: [
-                            {
-                                title: "1. Inventory Write-Down to NRV Entry:",
-                                debit: "Dr. Loss on Inventory Write-Down (Income Statement)",
-                                credit: "Cr. Allowance for Inventory Write-Down",
-                                amount: "$8,000",
-                                note: "Difference between cost ($50,000) and NRV ($42,000)"
-                            }
-                        ],
-                        calcType: "ias2"
-                    },
                     ias38: {
                         code: "IAS 38",
                         name: "Intangible Assets",
-                        metaphor: "💡 Patent or software generating economic benefits.",
-                        objective: "Distinguish research costs (expense) from development (capitalized asset).",
-                        explanation: "Expense research immediately; capitalize development when criteria are met.",
-                        measurementTitle: "Measurement Philosophy:",
+                        metaphor: "💡 Patent or software generating economic benefits without physical substance.",
+                        objective: "Distinguish research costs (expensed) from development costs (capitalized intangible asset).",
+                        explanation: "Expense research immediately due to uncertainty; capitalize development when feasibility criteria are met.",
+                        measurementTitle: "Research vs Development Philosophy:",
                         measurementDetails: [
-                            "Research: Expensed directly in Profit or Loss.",
-                            "Development: Capitalized as Intangible Asset and amortized."
+                            "Research Phase: Expensed directly in Profit or Loss.",
+                            "Development Phase: Capitalized as Intangible Asset and amortized."
                         ],
                         stepsTitle: "Application Steps:",
                         steps: [
-                            "Separate research from development.",
+                            "Separate research phase costs from development.",
                             "Capitalize qualifying development costs.",
-                            "Amortize asset over useful life."
+                            "Amortize asset over its estimated useful life."
                         ],
                         exampleTitle: "Practical Example & Calculator:",
                         exampleText: "Spent $20,000 research and $80,000 development for software with a 4-year life.",
@@ -475,20 +595,50 @@
                         ],
                         calcType: "ias38"
                     },
+                    ifrs9: {
+                        code: "IFRS 9",
+                        name: "Financial Instruments",
+                        metaphor: "⚖️ Vault and scale measuring expected credit risk.",
+                        objective: "Proactive Expected Credit Loss (ECL) recognition without waiting for default.",
+                        explanation: "Uses forward-looking ECL model to recognize credit provisions upon financial asset origination.",
+                        measurementTitle: "ECL Model Formula:",
+                        measurementDetails: [
+                            "ECL = Exposure Amount × Probability of Default (PD) × Loss Given Default (LGD).",
+                            "Record allowance provision in Profit or Loss immediately."
+                        ],
+                        stepsTitle: "Assessment Steps:",
+                        steps: [
+                            "Determine credit exposure (Receivables / Loans).",
+                            "Apply default probability percentage & loss given default.",
+                            "Record ECL provision entry."
+                        ],
+                        exampleTitle: "Practical Example & Calculator:",
+                        exampleText: "Receivables $200,000, 5% default probability, 80% loss given default. ECL = $8,000.",
+                        entries: [
+                            {
+                                title: "1. Expected Credit Loss (ECL) Provision Entry:",
+                                debit: "Dr. Expected Credit Loss Expense (Income Statement)",
+                                credit: "Cr. Allowance for Expected Credit Losses",
+                                amount: "$8,000",
+                                note: "Proactive provision for credit risk"
+                            }
+                        ],
+                        calcType: "ifrs9"
+                    },
                     ifrs15: {
                         code: "IFRS 15",
                         name: "Revenue from Contracts with Customers",
                         metaphor: "🏬 Multi-obligation contract with control transfer.",
                         objective: "Recognize revenue when control is transferred at allocated prices.",
-                        explanation: "Apply 5-Step Model to allocate transaction price fairly across performance obligations.",
-                        measurementTitle: "5-Step Model:",
+                        explanation: "Apply 5-Step Model to allocate transaction price fairly across performance obligations based on standalone values.",
+                        measurementTitle: "5-Step Model Framework:",
                         measurementDetails: [
                             "1. Identify contract 2. Identify obligations 3. Determine price 4. Allocate price 5. Recognize revenue."
                         ],
                         stepsTitle: "Allocation Steps:",
                         steps: [
                             "Sum standalone selling prices.",
-                            "Calculate percentage of each obligation.",
+                            "Calculate relative percentage of each obligation.",
                             "Allocate actual contract price based on percentages."
                         ],
                         exampleTitle: "Practical Example & Calculator:",
@@ -509,7 +659,7 @@
                         name: "Leases",
                         metaphor: "🔑 Leasing a building showing asset and liability on balance sheet.",
                         objective: "Eliminate off-balance sheet operating lease accounting.",
-                        explanation: "Recognize Right-of-Use (RoU) Asset and Lease Liability at present value of payments.",
+                        explanation: "Recognize Right-of-Use (RoU) Asset and Lease Liability at present value of future lease payments.",
                         measurementTitle: "Present Value Formula:",
                         measurementDetails: [
                             "Lease Liability = Present Value of Future Lease Payments.",
@@ -518,8 +668,8 @@
                         stepsTitle: "Bookkeeping Steps:",
                         steps: [
                             "Calculate PV using discount rate.",
-                            "Recognize RoU Asset & Liability.",
-                            "Record periodic interest & depreciation."
+                            "Recognize RoU Asset & Lease Liability.",
+                            "Record periodic interest & linear asset depreciation."
                         ],
                         exampleTitle: "Practical Example & Calculator:",
                         exampleText: "Building lease $30,000/yr for 3 years at 8% interest rate. PV = $77,313.",
@@ -540,36 +690,6 @@
                             }
                         ],
                         calcType: "ifrs16"
-                    },
-                    ifrs9: {
-                        code: "IFRS 9",
-                        name: "Financial Instruments",
-                        metaphor: "⚖️ Vault and scale measuring expected credit risk.",
-                        objective: "Proactive Expected Credit Loss (ECL) recognition.",
-                        explanation: "Do not wait for default; calculate ECL provision immediately upon issuing credit.",
-                        measurementTitle: "ECL Model Formula:",
-                        measurementDetails: [
-                            "ECL = Exposure Amount × Probability of Default (PD) × Loss Given Default (LGD).",
-                            "Record allowance provision in Profit or Loss immediately."
-                        ],
-                        stepsTitle: "Assessment Steps:",
-                        steps: [
-                            "Determine credit exposure (Receivables / Loans).",
-                            "Apply default probability percentage.",
-                            "Record ECL provision entry."
-                        ],
-                        exampleTitle: "Practical Example & Calculator:",
-                        exampleText: "Receivables $200,000, 5% default probability, 80% loss given default. ECL = $8,000.",
-                        entries: [
-                            {
-                                title: "1. Expected Credit Loss (ECL) Provision Entry:",
-                                debit: "Dr. Expected Credit Loss Expense (Income Statement)",
-                                credit: "Cr. Allowance for Expected Credit Losses",
-                                amount: "$8,000",
-                                note: "Proactive provision for credit risk"
-                            }
-                        ],
-                        calcType: "ifrs9"
                     }
                 }
             }
@@ -588,7 +708,6 @@
             document.getElementById('sidebarHeader').innerText = data.sidebarHeader;
             document.getElementById('footerText').innerText = data.footerText;
             document.getElementById('searchInput').placeholder = data.searchPlaceholder;
-
             renderNav();
             renderContent();
         }
@@ -631,7 +750,6 @@
                     const matchName = std.name.toLowerCase().includes(searchQuery);
                     if (!matchCode && !matchName) continue;
                 }
-
                 const isActive = id === currentStandardId;
                 const isCompleted = completedStandards.has(id);
                 const activeClass = isActive 
@@ -648,11 +766,9 @@
                     </button>
                 `;
             }
-
             if (html === '') {
                 html = `<p class="text-xs text-center text-slate-500 py-4">${currentLang === 'ar' ? 'لا توجد نتائج مطابقة' : 'No matching results'}</p>`;
             }
-
             container.innerHTML = html;
         }
 
@@ -711,7 +827,7 @@
                 let entriesHtml = std.entries.map(e => `
                     <div class="bg-white/90 border-l-4 border-[#561139] p-4 rounded-r-xl border-y border-r border-white/60 shadow-sm space-y-2">
                         <h4 class="font-bold text-xs sm:text-sm text-[#561139]">${e.title}</h4>
-                        <div class="bg-slate-900 text-emerald-400 p-3 rounded-lg font-mono text-xs leading-relaxed dir-ltr">
+                        <div class="bg-slate-900 text-emerald-400 p-3 rounded-lg font-mono text-xs leading-relaxed whitespace-pre-line dir-ltr">
                             <div class="font-semibold text-slate-200">${e.debit}</div>
                             <div class="pl-4 font-semibold text-slate-200">${e.credit}</div>
                             <div class="text-amber-300 mt-1">Amount: ${e.amount}</div>
@@ -747,7 +863,7 @@
                             <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">${std.objective}</p>
                         </div>
                         <div>
-                            <h3 class="text-xs sm:text-sm font-bold text-[#38A2D7] mb-1">${currentLang === 'ar' ? 'الشرح المبسط:' : 'Simplified Explanation:'}</h3>
+                            <h3 class="text-xs sm:text-sm font-bold text-[#38A2D7] mb-1">${currentLang === 'ar' ? 'الشرح المبسط والمفصل:' : 'Detailed Explanation:'}</h3>
                             <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">${std.explanation}</p>
                         </div>
                     </div>
@@ -790,26 +906,22 @@
         function renderCalculator(calcType) {
             const container = document.getElementById('calculatorWidget');
             if (!container) return;
-
-            if (calcType === 'ias16') {
+            
+            if (calcType === 'ias1') {
                 container.innerHTML = `
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-200 mb-3">
                         <div>
-                            <label class="block mb-1 font-semibold">${currentLang === 'ar' ? 'سعر الشراء ($)' : 'Purchase Price ($)'}</label>
-                            <input type="number" id="ias16_price" value="100000" oninput="calcIAS16()" class="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none">
+                            <label class="block mb-1 font-semibold">${currentLang === 'ar' ? 'الأصول المتداولة ($)' : 'Current Assets ($)'}</label>
+                            <input type="number" id="ias1_ca" value="50000" oninput="calcIAS1()" class="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none">
                         </div>
                         <div>
-                            <label class="block mb-1 font-semibold">${currentLang === 'ar' ? 'مصاريف النقل والتركيب ($)' : 'Setup & Freight ($)'}</label>
-                            <input type="number" id="ias16_setup" value="10000" oninput="calcIAS16()" class="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none">
-                        </div>
-                        <div>
-                            <label class="block mb-1 font-semibold">${currentLang === 'ar' ? 'العمر الإنتاجي (سنوات)' : 'Useful Life (Years)'}</label>
-                            <input type="number" id="ias16_years" value="5" oninput="calcIAS16()" class="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none">
+                            <label class="block mb-1 font-semibold">${currentLang === 'ar' ? 'الالتزامات المتداولة ($)' : 'Current Liabilities ($)'}</label>
+                            <input type="number" id="ias1_cl" value="15000" oninput="calcIAS1()" class="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none">
                         </div>
                     </div>
-                    <div id="ias16_res" class="bg-slate-800/80 p-3 rounded-xl border border-slate-700 text-xs text-emerald-300 font-mono space-y-1"></div>
+                    <div id="ias1_res" class="bg-slate-800/80 p-3 rounded-xl border border-slate-700 text-xs text-emerald-300 font-mono space-y-1"></div>
                 `;
-                calcIAS16();
+                calcIAS1();
             } else if (calcType === 'ias2') {
                 container.innerHTML = `
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-200 mb-3">
@@ -829,6 +941,44 @@
                     <div id="ias2_res" class="bg-slate-800/80 p-3 rounded-xl border border-slate-700 text-xs text-emerald-300 font-mono space-y-1"></div>
                 `;
                 calcIAS2();
+            } else if (calcType === 'ias7') {
+                container.innerHTML = `
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-200 mb-3">
+                        <div>
+                            <label class="block mb-1 font-semibold">${currentLang === 'ar' ? 'صافي الربح ($)' : 'Net Profit ($)'}</label>
+                            <input type="number" id="ias7_profit" value="50000" oninput="calcIAS7()" class="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block mb-1 font-semibold">${currentLang === 'ar' ? 'مصروف الإهلاك (+) ($)' : 'Depreciation (+) ($)'}</label>
+                            <input type="number" id="ias7_dep" value="10000" oninput="calcIAS7()" class="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block mb-1 font-semibold">${currentLang === 'ar' ? 'التغير في رأس المال العامل ($)' : 'Working Capital Change ($)'}</label>
+                            <input type="number" id="ias7_wc" value="-5000" oninput="calcIAS7()" class="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none">
+                        </div>
+                    </div>
+                    <div id="ias7_res" class="bg-slate-800/80 p-3 rounded-xl border border-slate-700 text-xs text-emerald-300 font-mono space-y-1"></div>
+                `;
+                calcIAS7();
+            } else if (calcType === 'ias16') {
+                container.innerHTML = `
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-200 mb-3">
+                        <div>
+                            <label class="block mb-1 font-semibold">${currentLang === 'ar' ? 'سعر الشراء ($)' : 'Purchase Price ($)'}</label>
+                            <input type="number" id="ias16_price" value="100000" oninput="calcIAS16()" class="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block mb-1 font-semibold">${currentLang === 'ar' ? 'مصاريف النقل والتركيب ($)' : 'Setup & Freight ($)'}</label>
+                            <input type="number" id="ias16_setup" value="10000" oninput="calcIAS16()" class="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block mb-1 font-semibold">${currentLang === 'ar' ? 'العمر الإنتاجي (سنوات)' : 'Useful Life (Years)'}</label>
+                            <input type="number" id="ias16_years" value="5" oninput="calcIAS16()" class="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none">
+                        </div>
+                    </div>
+                    <div id="ias16_res" class="bg-slate-800/80 p-3 rounded-xl border border-slate-700 text-xs text-emerald-300 font-mono space-y-1"></div>
+                `;
+                calcIAS16();
             } else if (calcType === 'ias38') {
                 container.innerHTML = `
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-200 mb-3">
@@ -908,17 +1058,14 @@
             }
         }
 
-        function calcIAS16() {
-            const price = parseFloat(document.getElementById('ias16_price').value) || 0;
-            const setup = parseFloat(document.getElementById('ias16_setup').value) || 0;
-            const years = parseFloat(document.getElementById('ias16_years').value) || 1;
-
-            const totalCost = price + setup;
-            const annualDep = totalCost / (years > 0 ? years : 1);
-
-            document.getElementById('ias16_res').innerHTML = `
-                <div><strong>${currentLang === 'ar' ? 'التكلفة الرأسمالية الموحدة للأصل:' : 'Capitalized Asset Cost:'}</strong> $${totalCost.toLocaleString()}</div>
-                <div><strong>${currentLang === 'ar' ? 'قسط الإهلاك السنوي:' : 'Annual Depreciation:'}</strong> $${annualDep.toFixed(2).toLocaleString()} / year</div>
+        function calcIAS1() {
+            const ca = parseFloat(document.getElementById('ias1_ca').value) || 0;
+            const cl = parseFloat(document.getElementById('ias1_cl').value) || 0;
+            const wc = ca - cl;
+            const ratio = cl > 0 ? (ca / cl).toFixed(2) : 0;
+            document.getElementById('ias1_res').innerHTML = `
+                <div><strong>${currentLang === 'ar' ? 'رأس المال العامل (Working Capital):' : 'Working Capital:'}</strong> $${wc.toLocaleString()}</div>
+                <div><strong>${currentLang === 'ar' ? 'نسبة التداول (Current Ratio):' : 'Current Ratio:'}</strong> ${ratio}</div>
             `;
         }
 
@@ -926,11 +1073,9 @@
             const cost = parseFloat(document.getElementById('ias2_cost').value) || 0;
             const price = parseFloat(document.getElementById('ias2_price').value) || 0;
             const sellCost = parseFloat(document.getElementById('ias2_sellCost').value) || 0;
-
             const nrv = price - sellCost;
             const loss = Math.max(0, cost - nrv);
             const bookVal = Math.min(cost, nrv);
-
             document.getElementById('ias2_res').innerHTML = `
                 <div><strong>${currentLang === 'ar' ? 'صافي القيمة القابلة للتحقق (NRV):' : 'Net Realizable Value (NRV):'}</strong> $${nrv.toLocaleString()}</div>
                 <div><strong>${currentLang === 'ar' ? 'القيمة المسجلة بالمركز المالي (الأقل):' : 'Carrying Amount on Balance Sheet:'}</strong> $${bookVal.toLocaleString()}</div>
@@ -938,13 +1083,33 @@
             `;
         }
 
+        function calcIAS7() {
+            const profit = parseFloat(document.getElementById('ias7_profit').value) || 0;
+            const dep = parseFloat(document.getElementById('ias7_dep').value) || 0;
+            const wc = parseFloat(document.getElementById('ias7_wc').value) || 0;
+            const ocf = profit + dep + wc;
+            document.getElementById('ias7_res').innerHTML = `
+                <div><strong>${currentLang === 'ar' ? 'صافي التدفق النقدي التشغيلي (OCF):' : 'Net Operating Cash Flow:'}</strong> $${ocf.toLocaleString()}</div>
+            `;
+        }
+
+        function calcIAS16() {
+            const price = parseFloat(document.getElementById('ias16_price').value) || 0;
+            const setup = parseFloat(document.getElementById('ias16_setup').value) || 0;
+            const years = parseFloat(document.getElementById('ias16_years').value) || 1;
+            const totalCost = price + setup;
+            const annualDep = totalCost / (years > 0 ? years : 1);
+            document.getElementById('ias16_res').innerHTML = `
+                <div><strong>${currentLang === 'ar' ? 'التكلفة الرأسمالية الموحدة للأصل:' : 'Capitalized Asset Cost:'}</strong> $${totalCost.toLocaleString()}</div>
+                <div><strong>${currentLang === 'ar' ? 'قسط الإهلاك السنوي:' : 'Annual Depreciation:'}</strong> $${annualDep.toFixed(2).toLocaleString()} / year</div>
+            `;
+        }
+
         function calcIAS38() {
             const resCost = parseFloat(document.getElementById('ias38_resCost').value) || 0;
             const devCost = parseFloat(document.getElementById('ias38_devCost').value) || 0;
             const years = parseFloat(document.getElementById('ias38_years').value) || 1;
-
             const annAmort = devCost / (years > 0 ? years : 1);
-
             document.getElementById('ias38_res').innerHTML = `
                 <div><strong>${currentLang === 'ar' ? 'مصروفات البحث (قائمة الدخل فوراً):' : 'Expensed Research Cost:'}</strong> $${resCost.toLocaleString()}</div>
                 <div><strong>${currentLang === 'ar' ? 'الأصل غير الملموس المرأسمال:' : 'Capitalized Intangible Asset:'}</strong> $${devCost.toLocaleString()}</div>
@@ -956,11 +1121,9 @@
             const bundle = parseFloat(document.getElementById('ifrs15_bundle').value) || 0;
             const item = parseFloat(document.getElementById('ifrs15_item').value) || 0;
             const service = parseFloat(document.getElementById('ifrs15_service').value) || 0;
-
             const totalStandalone = item + service;
             const itemAlloc = totalStandalone > 0 ? (item / totalStandalone) * bundle : 0;
             const serviceAlloc = totalStandalone > 0 ? (service / totalStandalone) * bundle : 0;
-
             document.getElementById('ifrs15_res').innerHTML = `
                 <div><strong>${currentLang === 'ar' ? 'إجمالي القيم المنفصلة:' : 'Total Standalone Value:'}</strong> $${totalStandalone.toLocaleString()}</div>
                 <div><strong>${currentLang === 'ar' ? 'سعر إيراد المنتج المخصص:' : 'Allocated Item Revenue:'}</strong> $${itemAlloc.toFixed(2).toLocaleString()}</div>
@@ -972,15 +1135,12 @@
             const pay = parseFloat(document.getElementById('ifrs16_pay').value) || 0;
             const years = parseInt(document.getElementById('ifrs16_years').value) || 1;
             const rate = (parseFloat(document.getElementById('ifrs16_rate').value) || 0) / 100;
-
             let pv = 0;
             for (let t = 1; t <= years; t++) {
                 pv += pay / Math.pow(1 + rate, t);
             }
-
             const year1Interest = pv * rate;
             const year1Dep = pv / years;
-
             document.getElementById('ifrs16_res').innerHTML = `
                 <div><strong>${currentLang === 'ar' ? 'القيمة الحالية (أصل حق الاستخدام والالتزام):' : 'Present Value (RoU Asset & Lease Liability):'}</strong> $${pv.toFixed(2).toLocaleString()}</div>
                 <div><strong>${currentLang === 'ar' ? 'مصروف فائدة السنة الأولى:' : 'Year 1 Interest Expense:'}</strong> $${year1Interest.toFixed(2).toLocaleString()}</div>
@@ -992,9 +1152,7 @@
             const amount = parseFloat(document.getElementById('ifrs9_amount').value) || 0;
             const pd = (parseFloat(document.getElementById('ifrs9_pd').value) || 0) / 100;
             const lgd = (parseFloat(document.getElementById('ifrs9_lgd').value) || 0) / 100;
-
             const ecl = amount * pd * lgd;
-
             document.getElementById('ifrs9_res').innerHTML = `
                 <div><strong>${currentLang === 'ar' ? 'إجمالي التعرض الائتماني:' : 'Total Exposure Amount:'}</strong> $${amount.toLocaleString()}</div>
                 <div class="text-amber-400 font-bold"><strong>${currentLang === 'ar' ? 'مخصص الخسائر الائتمانية المتوقعة (ECL):' : 'Expected Credit Loss (ECL) Provision:'}</strong> $${ecl.toFixed(2).toLocaleString()}</div>
@@ -1007,4 +1165,4 @@
         };
     </script>
 </body>
-</html>
+</html
