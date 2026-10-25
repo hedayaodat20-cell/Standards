@@ -1,1 +1,1586 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<script>try{if(localStorage.getItem("almadina-standards-lang")==="en"){document.documentElement.lang="en";document.documentElement.dir="ltr";}}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المعايير الدولية — تدرّب على المعايير المحاسبية</title>
+<meta name="description" content="تدريب تفاعلي على المعايير المحاسبية: فكرة مختصرة، حالة عملية بأرقام، أسئلة قيود ومبالغ بتصحيح فوري.">
+<meta property="og:title" content="المعايير الدولية — تدرّب على المعيار">
+<meta property="og:description" content="فكرة بـ 3 سطور، حالة عملية بأرقام، وأسئلة بتصحيح فوري — IAS 2، IAS 16، IAS 38، الإهلاك، الإطار المفاهيمي.">
+<meta name="theme-color" content="#f6f4fb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237350ff' stroke-width='2'%3E%3Cpath d='M3 20V10l6-4v14'/%3E%3Cpath d='M9 20V5l6-2v17'/%3E%3Cpath d='M15 20v-9l6-3v12'/%3E%3Cpath d='M2 20h20'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--purple:#7c4dff;--purple2:#a78bfa;--aqua:#16d7d2;--pink:#f4b7d8;--ink:#111827;--muted:#64748b;--line:rgba(124,77,255,.12);--ok:#0f9d6b;--okbg:#e9faf3;--bad:#d64561;--badbg:#fdeef1;--warn:#b7791f;--warnbg:#fff8e8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;font-family:'Noto Sans Arabic',system-ui,sans-serif;color:var(--ink);line-height:1.75;
+ background:radial-gradient(circle at 12% 6%,rgba(255,255,255,.95),transparent 26%),radial-gradient(circle at 85% 12%,rgba(214,230,255,.55),transparent 30%),radial-gradient(circle at 70% 85%,rgba(222,210,255,.40),transparent 30%),linear-gradient(135deg,#f4f6fa 0%,#faf8fc 55%,#f3fbfc 100%);background-attachment:fixed}
+button,input{font-family:inherit;font-size:inherit;color:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+.num,.amt{font-variant-numeric:tabular-nums}
+.app-shell{width:min(100%,1100px);margin:0 auto;padding:16px 14px 20px}
+@media(min-width:760px){.app-shell{width:min(94vw,1100px);margin:3vh auto;padding:26px;border-radius:34px;background:linear-gradient(145deg,rgba(255,255,255,.70),rgba(255,255,255,.40));border:1px solid rgba(255,255,255,.9);box-shadow:0 30px 80px rgba(91,76,114,.14),inset 0 1px 0 #fff;backdrop-filter:blur(26px)}}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-icon{width:52px;height:52px;flex:none;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(168,139,250,.46) 46%,rgba(103,232,249,.42));border:1px solid #fff;box-shadow:0 12px 24px rgba(124,77,255,.18),inset 0 1px 0 #fff}
+.brand-icon svg{width:29px;height:29px;color:#7350ff}
+.brand-title{margin:0;font-size:23px;line-height:1.2;font-weight:800}
+.brand-subtitle{margin:2px 0 0;color:#475569;font-size:13px}
+@media(min-width:760px){.brand-icon{width:64px;height:64px;border-radius:20px}.brand-icon svg{width:35px;height:35px}.brand-title{font-size:30px}.brand-subtitle{font-size:14px}}
+.glass{background:linear-gradient(145deg,rgba(255,255,255,.80),rgba(255,255,255,.55));border:1px solid rgba(255,255,255,.95);border-radius:22px;box-shadow:0 12px 30px rgba(95,82,110,.08),inset 0 1px 0 #fff}
+/* home */
+.hero{padding:18px;margin-bottom:14px;background:radial-gradient(circle at 88% 85%,rgba(103,232,249,.28),transparent 40%),radial-gradient(circle at 10% 20%,rgba(167,139,250,.22),transparent 40%),linear-gradient(145deg,rgba(255,255,255,.85),rgba(255,255,255,.55))}
+.hero h2{margin:0 0 4px;font-size:21px;font-weight:800}
+.hero p{margin:0;color:#475569;font-size:14px}
+.steps{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;padding:0;list-style:none}
+.steps li{font-size:12px;padding:4px 10px;border-radius:20px;background:rgba(124,77,255,.08);color:#5b3fd6;font-weight:600}
+.overall{margin-top:14px;display:flex;align-items:center;gap:10px;font-size:13px;color:#475569}
+.overall .bar{flex:1}
+.bar{height:8px;border-radius:8px;background:rgba(124,77,255,.10);overflow:hidden}
+.bar>i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,var(--purple),var(--aqua));transition:width .4s}
+.section-label{font-size:14px;font-weight:800;color:#334155;margin:18px 4px 10px}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.topic-card{display:flex;flex-direction:column;gap:8px;padding:16px;text-align:right;border-radius:22px;border:1px solid #fff;box-shadow:0 12px 26px rgba(88,74,102,.08),inset 0 1px 0 #fff;transition:transform .2s,box-shadow .2s;width:100%}
+.topic-card:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(88,74,102,.12)}
+.topic-card.violet{background:radial-gradient(circle at 85% 15%,rgba(198,164,255,.38),transparent 40%),linear-gradient(145deg,rgba(255,255,255,.9),rgba(241,233,255,.6))}
+.topic-card.pink{background:radial-gradient(circle at 85% 15%,rgba(255,203,222,.55),transparent 40%),linear-gradient(145deg,rgba(255,255,255,.9),rgba(255,238,245,.6))}
+.topic-card.aqua{background:radial-gradient(circle at 85% 15%,rgba(140,236,232,.42),transparent 40%),linear-gradient(145deg,rgba(255,255,255,.9),rgba(232,250,250,.6))}
+.tc-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.badge{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:12px;background:#fff;color:#5b3fd6;border:1px solid var(--line);direction:ltr}
+.chip{font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:12px;background:rgba(100,116,139,.10);color:#475569}
+.chip.done{background:var(--okbg);color:var(--ok)}
+.chip.going{background:rgba(124,77,255,.10);color:#5b3fd6}
+.tc-title{font-size:17px;font-weight:800;line-height:1.5}
+.tc-en{font-size:12.5px;color:var(--muted);direction:ltr;text-align:right}
+.tc-prog{display:flex;align-items:center;gap:8px;font-size:12px;color:#475569}
+.tc-prog .bar{flex:1;height:6px}
+/* topic */
+.back{display:inline-flex;align-items:center;gap:6px;border:1px solid #fff;background:rgba(255,255,255,.75);border-radius:16px;padding:7px 14px;font-size:13.5px;font-weight:700;color:#334155;box-shadow:0 6px 14px rgba(95,82,110,.06)}
+.t-head{padding:16px;margin:12px 0}
+.t-head h2{margin:8px 0 0;font-size:21px;font-weight:800;line-height:1.5}
+.t-head .en{color:var(--muted);font-size:13px;direction:ltr;text-align:right}
+.t-head .tc-prog{margin-top:10px}
+.card{padding:16px;margin-bottom:12px}
+.card h3{margin:0 0 10px;font-size:15.5px;font-weight:800;display:flex;align-items:center;gap:8px}
+.card h3 .dot{width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:13px;color:#fff;background:linear-gradient(145deg,#7c4dff,#a78bfa);flex:none}
+.idea{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.idea li{position:relative;padding-right:16px;font-size:14.5px}
+.idea li::before{content:"";position:absolute;right:0;top:.72em;width:7px;height:7px;border-radius:50%;background:var(--aqua)}
+.case-title{font-weight:800;font-size:14.5px;margin-bottom:6px;color:#3b2a8f}
+.case p{margin:0 0 4px;font-size:14.5px}
+.q{padding:16px;margin-bottom:12px;scroll-margin-top:12px}
+.q-n{font-size:12px;font-weight:800;color:#7c4dff;margin-bottom:4px}
+.q-text{font-size:15.5px;font-weight:700;margin:0 0 12px;line-height:1.7}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;align-items:flex-start;gap:10px;text-align:right;width:100%;padding:11px 12px;border-radius:14px;border:1.5px solid rgba(124,77,255,.16);background:#fff;font-size:14.5px;line-height:1.65;transition:border-color .15s,background .15s}
+.opt:hover:not(:disabled){border-color:var(--purple2);background:#faf8ff}
+.opt .k{flex:none;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;background:rgba(124,77,255,.10);color:#5b3fd6;margin-top:1px}
+.opt:disabled{cursor:default}
+.opt.right{border-color:var(--ok);background:var(--okbg)}
+.opt.right .k{background:var(--ok);color:#fff}
+.opt.wrong{border-color:var(--bad);background:var(--badbg)}
+.opt.wrong .k{background:var(--bad);color:#fff}
+.opt.dim{opacity:.6}
+.num-row{display:flex;gap:8px;align-items:stretch}
+.num-row label{position:relative;flex:1;display:flex;min-width:0}
+.num-row input{flex:1;min-width:0;height:48px;border-radius:14px;border:1.5px solid rgba(124,77,255,.22);background:#fff;padding:0 14px 0 58px;font-size:17px;font-weight:700;direction:ltr;text-align:left;outline:none}
+.num-row input:focus{border-color:var(--purple)}
+.num-row .unit{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--muted);font-weight:700;pointer-events:none}
+.btn{height:48px;padding:0 16px;border:0;border-radius:14px;font-weight:800;font-size:14px;color:#fff;background:linear-gradient(145deg,#7c4dff,#8f65ff);box-shadow:0 8px 18px rgba(124,77,255,.22);white-space:nowrap}
+.btn:disabled{opacity:.5;cursor:default;box-shadow:none}
+.btn.ghost{background:#fff;color:#5b3fd6;border:1px solid var(--line);box-shadow:none}
+.hint{font-size:12.5px;color:var(--bad);margin-top:6px;min-height:0}
+.fb{margin-top:12px;border-radius:16px;padding:12px 14px;font-size:14.5px;animation:pop .25s ease}
+@keyframes pop{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.fb.ok{background:var(--okbg);border:1px solid rgba(15,157,107,.25)}
+.fb.no{background:var(--badbg);border:1px solid rgba(214,69,97,.22)}
+.fb-head{font-weight:800;font-size:15px;margin-bottom:4px}
+.fb.ok .fb-head{color:var(--ok)}
+.fb.no .fb-head{color:var(--bad)}
+.fb p{margin:4px 0}
+.fb .your{font-weight:700}
+.fb .correct-val{font-weight:800}
+.entry-title{font-weight:800;font-size:13.5px;margin:12px 0 6px;color:#334155}
+.entry{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;font-size:13.5px;border:1px solid rgba(124,77,255,.14)}
+.entry th{background:rgba(124,77,255,.07);color:#3b2a8f;font-weight:800;padding:7px 8px;text-align:right;font-size:12.5px}
+.entry td{padding:7px 8px;border-top:1px solid rgba(124,77,255,.08);vertical-align:top}
+.entry th.n,.entry td.n{text-align:left;direction:ltr;white-space:nowrap;width:1%;font-variant-numeric:tabular-nums}
+.entry td.cr-acc{padding-right:26px}
+.entry td.sub{color:#475569;font-weight:700}
+.entry tr.total td{font-weight:800;background:rgba(22,215,210,.08)}
+.mistake{padding:16px;margin-bottom:12px;background:linear-gradient(145deg,#fffaf0,#fff6e3);border:1px solid rgba(183,121,31,.22);border-radius:22px}
+.mistake h3{margin:0 0 6px;font-size:15.5px;font-weight:800;color:var(--warn)}
+.mistake p{margin:0;font-size:14.5px}
+.t-foot{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;margin:16px 0 4px}
+.score{padding:16px;margin-bottom:12px;text-align:center}
+.score b{font-size:22px}
+.copyright-footer{margin-top:20px;padding:12px;text-align:center;border-radius:18px;background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.8);color:var(--muted);font-size:11px;line-height:1.8;direction:ltr}
+@media(min-width:760px){.idea li,.case p,.opt,.fb,.mistake p{font-size:15px}.q-text{font-size:16.5px}}
+.m{unicode-bidi:isolate;direction:ltr;white-space:nowrap;font-variant-numeric:tabular-nums}
+.related .rel{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;margin-top:8px;border-radius:14px;background:#fff;border:1px solid var(--line);font-size:14px;font-weight:700;color:#3b2a8f}
+.t-foot .btn{max-width:100%;white-space:normal;line-height:1.4;padding:8px 16px;height:auto;min-height:48px}
 
+
+/* language toggle + LTR (English) */
+.lang-toggle{display:inline-flex;align-items:center;gap:6px;flex:none;height:38px;padding:0 14px;border-radius:19px;border:1px solid rgba(124,77,255,.22);background:rgba(255,255,255,.85);color:#5b3fd6;font-size:13.5px;font-weight:800;box-shadow:0 6px 14px rgba(95,82,110,.08),inset 0 1px 0 #fff;transition:background .15s,border-color .15s}
+.lang-toggle:hover{background:#fff;border-color:var(--purple2)}
+.lang-toggle .g{font-size:15px;line-height:1}
+.topbar{gap:10px}
+html[dir="ltr"] body{line-height:1.6}
+html[dir="ltr"] .topic-card,html[dir="ltr"] .opt,html[dir="ltr"] .entry th{text-align:left}
+html[dir="ltr"] .tc-en,html[dir="ltr"] .t-head .en{text-align:left}
+html[dir="ltr"] .idea li{padding-right:0;padding-left:16px}
+html[dir="ltr"] .idea li::before{right:auto;left:0}
+html[dir="ltr"] .entry th.n,html[dir="ltr"] .entry td.n{text-align:right}
+html[dir="ltr"] .entry td.cr-acc{padding-right:8px;padding-left:26px}
+html[dir="ltr"] .num-row input{padding:0 58px 0 14px}
+html[dir="ltr"] .num-row .unit{left:auto;right:12px}
+</style>
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <a class="brand" href="#/">
+      <div class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20V10l6-4v14"/><path d="M9 20V5l6-2v17"/><path d="M15 20v-9l6-3v12"/><path d="M2 20h20"/></svg></div>
+      <div><h1 class="brand-title" id="brandTitle">المعايير الدولية</h1><p class="brand-subtitle" id="brandSub">تدرّب على المعايير المحاسبية</p></div>
+    </a>
+    <button type="button" class="lang-toggle" id="langToggle" aria-label="Switch to English" title="Language"><span class="g" aria-hidden="true">🌐</span><span id="langLabel">English</span></button>
+  </header>
+  <main id="app" aria-live="polite"></main>
+  <footer class="copyright-footer">
+    <div>Interactive Tool Designed by Hedayah Odat</div>
+    <div>© 2026 Hedayah Odat. All Rights Reserved.</div>
+  </footer>
+</div>
+<script>
+/* المعايير الدولية — تدرّب على المعيار
+   كل موضوع = عنصر واحد بهاي القائمة. إضافة موضوع جديد = نسخ عنصر وتعديل محتواه.
+   type: "mc" اختيار من متعدد (correct = رقم الخيار الصحيح يبدأ من 0)
+   type: "num" إدخال مبلغ (answer = المبلغ الصحيح، wrong = أخطاء متوقعة مع شرحها)
+   entry: القيد الكامل الذي يظهر بعد الإجابة — dr مدين، cr دائن */
+window.TOPICS = [
+{
+  id: "framework",
+  code: "CF",
+  title: "الإطار المفاهيمي",
+  en: "Conceptual Framework",
+  color: "violet",
+  idea: [
+    "الهدف: تقديم معلومات مالية مفيدة للمستثمرين والمقرضين لاتخاذ قراراتهم (Objective of financial reporting).",
+    "الخاصيتان الأساسيتان: الملاءمة (Relevance) والتمثيل الصادق (Faithful representation). والمعزِّزة: المقارنة، التحقق، التوقيت المناسب، الفهم.",
+    "العناصر الخمسة: الأصل، الالتزام، حقوق الملكية، الدخل، المصروفات (Elements)."
+  ],
+  caseTitle: "شركة نور للأثاث — عمّان",
+  caseText: [
+    "شركة نور للأثاث تعدّ قوائمها المالية لسنة 2026. خلال السنة حصل التالي:",
+    "• تطبّق الشركة نفس السياسات المحاسبية كل سنة، حتى يقارن المستثمر بين 2025 و2026.",
+    "• استلمت 2,000 دينار نقداً من زبون مقدماً عن طاولات ستُسلَّم الشهر القادم.",
+    "• المدقق يريد التأكد أن الأرقام تعكس الواقع كما هو: كاملة، محايدة، وخالية من الأخطاء."
+  ],
+  questions: [
+    {
+      type: "mc",
+      q: "تطبيق نفس السياسات كل سنة حتى يقارن المستثمر بين 2025 و2026 يحقق أي خاصية نوعية؟",
+      options: ["الملاءمة (Relevance)", "القابلية للمقارنة (Comparability)", "التوقيت المناسب (Timeliness)", "القابلية للتحقق (Verifiability)"],
+      correct: 1,
+      why: "القابلية للمقارنة خاصية معزِّزة: تسمح بمقارنة المنشأة مع نفسها عبر السنوات ومع منشآت أخرى. الثبات في تطبيق السياسات (Consistency) وسيلة لتحقيقها.",
+      optionWhy: [
+        "الملاءمة تعني أن المعلومة تؤثر في القرار (قيمة تنبؤية أو تأكيدية)، وليست عن المقارنة بين السنوات.",
+        "",
+        "التوقيت المناسب يعني وصول المعلومة قبل أن تفقد قدرتها على التأثير في القرار.",
+        "التحقق يعني أن مراقبين مستقلين يصلون لنفس النتيجة تقريباً."
+      ]
+    },
+    {
+      type: "mc",
+      q: "كيف يُصنَّف مبلغ 2,000 دينار المستلم مقدماً من الزبون عند الاستلام؟",
+      options: ["إيراد (Income)", "أصل فقط، بدون أي التزام", "التزام (Liability)", "حقوق ملكية (Equity)"],
+      correct: 2,
+      why: "الالتزام = واجب حالي على المنشأة بتحويل مورد اقتصادي نتيجة أحداث سابقة. الشركة ملزمة بتسليم الطاولات (أو رد المبلغ)، فالمبلغ التزام عقد إلى أن تُسلَّم الطاولات، وعندها فقط يصبح إيراداً.",
+      optionWhy: [
+        "لم يُكتسب الإيراد بعد، لأن الطاولات لم تُسلَّم.",
+        "النقدية زادت فعلاً (أصل)، لكن يقابلها التزام بالتسليم، والقيد لازم يتوازن.",
+        "",
+        "حقوق الملكية تأتي من الملاك والأرباح، والزبون ليس مالكاً."
+      ],
+      entry: [
+        { a: "النقدية", dr: 2000 },
+        { a: "إيرادات مقبوضة مقدماً (التزام عقد)", cr: 2000 }
+      ]
+    },
+    {
+      type: "mc",
+      q: "طلب المدقق أن تكون الأرقام كاملة ومحايدة وخالية من الأخطاء. أي خاصية هذه، وما نوعها؟",
+      options: ["القابلية للتحقق — خاصية معزِّزة", "الموثوقية (Reliability) — خاصية أساسية", "التمثيل الصادق — خاصية أساسية", "القابلية للفهم — خاصية معزِّزة"],
+      correct: 2,
+      why: "التمثيل الصادق (Faithful representation) خاصية أساسية، وعناصره الثلاثة: الاكتمال (Complete)، الحياد (Neutral)، الخلو من الأخطاء (Free from error).",
+      optionWhy: [
+        "التحقق معزِّزة وتعني اتفاق مراقبين مستقلين، أما الاكتمال والحياد والخلو من الأخطاء فهي عناصر التمثيل الصادق.",
+        "مصطلح «الموثوقية» قديم؛ استُبدل بـ «التمثيل الصادق» منذ إطار 2010.",
+        "",
+        "القابلية للفهم تعني عرض المعلومة بوضوح، وليست عن الاكتمال والحياد."
+      ]
+    }
+  ],
+  mistake: "كتابة «الموثوقية (Reliability)» كخاصية أساسية — استُبدلت بـ «التمثيل الصادق» منذ 2010. وأيضاً الخلط بين الأساسية (الملاءمة، التمثيل الصادق) والمعزِّزة (المقارنة، التحقق، التوقيت، الفهم)."
+},
+{
+  id: "ias2",
+  code: "IAS 2",
+  title: "المخزون",
+  en: "Inventories",
+  color: "pink",
+  idea: [
+    "يُقاس المخزون بالتكلفة أو صافي القيمة القابلة للتحقق، أيهما أقل (Lower of cost and NRV).",
+    "التكلفة = سعر الشراء + الرسوم غير المستردة + الشحن للداخل وكل ما يلزم لإيصاله لموقعه وحالته. لا تدخل: التخزين بعد الوصول، مصاريف البيع، المصاريف الإدارية.",
+    "صيغ التكلفة المسموحة: الوارد أولاً صادر أولاً (FIFO) والمتوسط المرجح (Weighted average). طريقة LIFO ممنوعة."
+  ],
+  caseTitle: "محل الريم للإلكترونيات — إربد (كانون الثاني 2026، نظام الجرد الدوري)",
+  caseText: [
+    "• 1/1: رصيد أول المدة 100 شاحن × 20 دينار = 2,000 دينار.",
+    "• 10/1: شراء 300 شاحن: السعر 6,600 + شحن للداخل 450 + رسوم جمركية غير مستردة 150 + تخزين بالمستودع بعد الوصول 120.",
+    "• 20/1: شراء 200 شاحن × 27 دينار = 5,400 دينار.",
+    "• المبيعات خلال الشهر: 450 شاحن. المتبقي آخر الشهر: 150 شاحن.",
+    "• 31/1: سعر البيع المتوقع للشاحن 26 دينار، ومصاريف البيع 3 دنانير للشاحن."
+  ],
+  questions: [
+    {
+      type: "num",
+      q: "كم تكلفة مشتريات 10/1 التي تُسجَّل في المخزون؟",
+      answer: 7200,
+      why: "التكلفة = 6,600 + 450 شحن للداخل + 150 رسوم جمركية غير مستردة = 7,200 دينار، أي 24 دينار للشاحن. التخزين بعد وصول البضاعة (120) مصروف فترة ولا يدخل في التكلفة.",
+      wrong: { "7320": "تمت إضافة التخزين بعد الوصول (120)، وهو مصروف فترة وليس جزءاً من تكلفة المخزون.", "6600": "سعر الشراء وحده لا يكفي؛ الشحن للداخل والرسوم غير المستردة جزء من التكلفة.", "7050": "الرسوم الجمركية غير المستردة جزء من التكلفة." },
+      entry: [
+        { a: "المخزون", dr: 7200 },
+        { a: "مصروف التخزين", dr: 120 },
+        { a: "البنك / الدائنون", cr: 7320 }
+      ]
+    },
+    {
+      type: "num",
+      q: "باستخدام المتوسط المرجح (دوري)، كم قيمة مخزون آخر المدة (150 شاحن)؟",
+      answer: 3650,
+      why: "تكلفة البضاعة المتاحة = 2,000 + 7,200 + 5,400 = 14,600 دينار لـ 600 شاحن. المتوسط = 14,600 ÷ 600 = 24.33 دينار. مخزون آخر المدة = 150 × 14,600 ÷ 600 = 3,650 دينار، وتكلفة البضاعة المباعة = 14,600 − 3,650 = 10,950 دينار.",
+      wrong: { "3600": "تم استخدام 24 فقط؛ المتوسط المرجح يشمل كل الدفعات: 14,600 ÷ 600 = 24.33.", "10950": "هذه تكلفة البضاعة المباعة (450 شاحن)، والسؤال عن مخزون آخر المدة (150 شاحن).", "3680": "على الأغلب تم احتساب التخزين (120) ضمن التكلفة: 150 × 14,720 ÷ 600.", "3550": "هذا متوسط بسيط للأسعار (20+24+27)÷3، والمطلوب متوسط مرجح بالكميات." }
+    },
+    {
+      type: "mc",
+      q: "باستخدام FIFO، مخزون آخر المدة = 150 × 27 = 4,050 دينار. ما قيد التخفيض لصافي القيمة القابلة للتحقق (NRV)؟",
+      options: [
+        "لا يوجد قيد، لأن سعر البيع 26 أعلى من التكلفة",
+        "من حـ/ خسارة انخفاض قيمة المخزون 600 — إلى حـ/ المخزون 600",
+        "من حـ/ خسارة انخفاض قيمة المخزون 450 — إلى حـ/ المخزون 450",
+        "من حـ/ المخزون 600 — إلى حـ/ أرباح إعادة تقييم المخزون 600"
+      ],
+      correct: 1,
+      why: "صافي القيمة القابلة للتحقق = (26 − 3) × 150 = 3,450 دينار. التكلفة (FIFO) = 4,050 دينار. الأقل هو 3,450، فالتخفيض = 4,050 − 3,450 = 600 دينار يُعترف به مصروفاً في نفس الفترة. (بعض الكتب تدرجه ضمن تكلفة البضاعة المباعة، والمبلغ نفسه.)",
+      optionWhy: [
+        "المقارنة تكون مع صافي القيمة القابلة للتحقق (سعر البيع − مصاريف البيع = 23)، وليست مع سعر البيع.",
+        "",
+        "450 = 150 × 3 (مصاريف البيع فقط). الصحيح: 4,050 − 3,450 = 600.",
+        "الاتجاه معكوس: المخزون ينخفض ولا يُرفع فوق التكلفة أبداً."
+      ],
+      entry: [
+        { a: "خسارة انخفاض قيمة المخزون", dr: 600 },
+        { a: "المخزون", cr: 600 }
+      ]
+    }
+  ],
+  mistake: "مقارنة التكلفة مع سعر البيع بدل صافي القيمة القابلة للتحقق (سعر البيع − مصاريف الإكمال والبيع). وإدخال التخزين بعد الوصول أو مصاريف البيع في تكلفة المخزون."
+},
+{
+  id: "ias16",
+  related: [{ id: "ias36", text: "عند وجود مؤشر انخفاض في قيمة الآلة: انخفاض قيمة الأصول — IAS 36" }],
+  code: "IAS 16",
+  title: "الأصول الملموسة — الممتلكات والآلات والمعدات",
+  en: "Tangible assets — PPE",
+  color: "aqua",
+  idea: [
+    "يُعترف بالأصل بالتكلفة: سعر الشراء بعد الخصم التجاري + الرسوم غير المستردة + كل تكلفة مباشرة لتجهيزه للعمل (نقل، تركيب، فحص).",
+    "بعد الاعتراف: نموذج التكلفة أو نموذج إعادة التقييم (للفئة كاملة). الصيانة الدورية مصروف، والإضافة التي تعطي منافع مستقبلية تُرسمل.",
+    "عند الاستبعاد: الربح أو الخسارة = المتحصلات − القيمة الدفترية (Derecognition)."
+  ],
+  caseTitle: "مصنع زيتون الشمال — جرش",
+  caseText: [
+    "في 1/1/2024 اشترى المصنع آلة عصر:",
+    "• سعر القائمة 50,000 دينار، خصم تجاري 10%.",
+    "• ضريبة مبيعات 16% = 7,200 دينار (مستردة من دائرة الضريبة).",
+    "• رسوم جمركية غير مستردة 2,000 — نقل 1,500 — تركيب 2,500 — تشغيل تجريبي وفحص 1,000.",
+    "• تدريب العمال على الآلة 800 دينار.",
+    "العمر الإنتاجي 10 سنوات، القيمة المتبقية (الخردة) 2,000 دينار، طريقة القسط الثابت."
+  ],
+  questions: [
+    {
+      type: "num",
+      q: "كم تكلفة الآلة التي تُسجَّل في 1/1/2024؟",
+      answer: 52000,
+      why: "50,000 − خصم 10% = 45,000 + رسوم جمركية 2,000 + نقل 1,500 + تركيب 2,500 + فحص 1,000 = 52,000 دينار. ضريبة المبيعات المستردة لا تدخل (تُسترد)، والتدريب (800) مصروف.",
+      wrong: { "52800": "تمت إضافة التدريب (800)، وهو مصروف وليس تكلفة لتجهيز الآلة.", "59200": "تمت إضافة ضريبة المبيعات المستردة (7,200)؛ المستردة لا تدخل في التكلفة.", "57000": "لم يُطرح الخصم التجاري (5,000).", "60000": "تمت إضافة ضريبة المبيعات المستردة والتدريب؛ كلاهما لا يدخل." },
+      entry: [
+        { a: "الآلات", dr: 52000 },
+        { a: "ضريبة المبيعات المستردة (مدينة)", dr: 7200 },
+        { a: "مصروف التدريب", dr: 800 },
+        { a: "البنك", cr: 60000 }
+      ]
+    },
+    {
+      type: "mc",
+      q: "في 2025 دفع المصنع 4,500 دينار لإضافة وحدة تزيد الطاقة الإنتاجية للآلة 30%، و1,200 دينار تغيير زيت وقطع روتينية. ما القيد؟",
+      options: [
+        "من حـ/ مصروف الصيانة 5,700 — إلى حـ/ البنك 5,700",
+        "من حـ/ الآلات 5,700 — إلى حـ/ البنك 5,700",
+        "من مذكورين: الآلات 4,500 + مصروف الصيانة 1,200 — إلى حـ/ البنك 5,700",
+        "من مذكورين: الآلات 1,200 + مصروف الصيانة 4,500 — إلى حـ/ البنك 5,700"
+      ],
+      correct: 2,
+      why: "الإضافة التي تزيد الطاقة الإنتاجية تعطي منافع اقتصادية مستقبلية، فتُرسمل على الأصل (Subsequent cost). الصيانة الروتينية (Day-to-day servicing) تحافظ على الأصل كما هو، فهي مصروف.",
+      optionWhy: [
+        "الإضافة (4,500) تزيد الطاقة الإنتاجية، فتُرسمل ولا تُصرف.",
+        "الصيانة الروتينية (1,200) لا تعطي منافع جديدة، فهي مصروف وليست تكلفة أصل.",
+        "",
+        "المبالغ معكوسة: الإضافة 4,500 هي التي تُرسمل."
+      ],
+      entry: [
+        { a: "الآلات", dr: 4500 },
+        { a: "مصروف الصيانة", dr: 1200 },
+        { a: "البنك", cr: 5700 }
+      ]
+    },
+    {
+      type: "mc",
+      q: "أرض المصنع مسجلة بتكلفة 200,000 دينار، والشركة تتبع نموذج إعادة التقييم. في 31/12/2025 أصبحت قيمتها العادلة 260,000 دينار (أول إعادة تقييم). ما القيد؟",
+      options: [
+        "من حـ/ الأراضي 60,000 — إلى حـ/ أرباح إعادة التقييم (قائمة الدخل) 60,000",
+        "من حـ/ الأراضي 60,000 — إلى حـ/ فائض إعادة التقييم (الدخل الشامل الآخر) 60,000",
+        "لا يوجد قيد، الأرض تبقى بالتكلفة دائماً",
+        "من حـ/ الأراضي 260,000 — إلى حـ/ فائض إعادة التقييم 260,000"
+      ],
+      correct: 1,
+      why: "الزيادة بإعادة التقييم تُسجَّل في الدخل الشامل الآخر وتتجمع في حقوق الملكية باسم «فائض إعادة التقييم» (Revaluation surplus). تذهب لقائمة الدخل فقط إذا كانت تعكس انخفاضاً سابقاً سُجِّل خسارة. والانخفاض (بدون فائض سابق) يُسجَّل خسارة في قائمة الدخل.",
+      optionWhy: [
+        "الزيادة الأولى لا تمر بقائمة الدخل؛ تذهب للدخل الشامل الآخر (فائض إعادة التقييم).",
+        "",
+        "الشركة اختارت نموذج إعادة التقييم، فالأرض تُعرض بقيمتها العادلة.",
+        "الفرق فقط (260,000 − 200,000 = 60,000) هو الذي يُسجَّل، والتكلفة الأصلية مسجلة أصلاً."
+      ],
+      entry: [
+        { a: "الأراضي", dr: 60000 },
+        { a: "فائض إعادة التقييم (حقوق الملكية)", cr: 60000 }
+      ]
+    },
+    {
+      type: "num",
+      q: "سؤال مستقل (بدون إضافة 2025): بيعت الآلة في 1/7/2027 بمبلغ 36,000 دينار نقداً. كم ربح البيع؟",
+      answer: 1500,
+      why: "الإهلاك السنوي = (52,000 − 2,000) ÷ 10 = 5,000 دينار. من 1/1/2024 حتى 30/6/2027 = 3.5 سنة، فمجمع الإهلاك = 17,500 دينار. القيمة الدفترية = 52,000 − 17,500 = 34,500. الربح = 36,000 − 34,500 = 1,500 دينار. (يُسجَّل أولاً إهلاك نصف سنة 2027 = 2,500 قبل قيد البيع.)",
+      wrong: { "-1000": "لم يُحتسب إهلاك نصف سنة 2027 (2,500): مجمع الإهلاك حتى تاريخ البيع 17,500 وليس 15,000.", "4000": "تم احتساب 4 سنوات كاملة؛ البيع في منتصف 2027 = 3.5 سنة.", "-16000": "لم يُطرح مجمع الإهلاك من التكلفة؛ القيمة الدفترية = 52,000 − 17,500." },
+      entry: [
+        { a: "البنك", dr: 36000 },
+        { a: "مجمع الإهلاك – الآلات", dr: 17500 },
+        { a: "الآلات", cr: 52000 },
+        { a: "أرباح بيع آلات", cr: 1500 }
+      ]
+    }
+  ],
+  mistake: "إدخال ضريبة المبيعات المستردة أو التدريب في تكلفة الأصل. ونسيان إهلاك الفترة الجزئية حتى تاريخ البيع قبل احتساب ربح أو خسارة الاستبعاد."
+},
+{
+  id: "dep",
+  code: "IAS 16 / 38",
+  title: "الإهلاك والإطفاء",
+  en: "Depreciation & Amortization",
+  color: "violet",
+  idea: [
+    "نفس الفكرة باسمين: توزيع (التكلفة − القيمة المتبقية) على العمر الإنتاجي. الإهلاك (Depreciation) للأصول الملموسة، والإطفاء (Amortization) للأصول غير الملموسة محددة العمر.",
+    "الطرق: القسط الثابت (Straight-line)، القسط المتناقص (Declining balance)، وحدات الإنتاج (Units of production). الطريقة تعكس نمط الاستفادة من منافع الأصل.",
+    "تغيير العمر أو القيمة المتبقية = تغيير تقدير محاسبي (IAS 8): يُطبَّق مستقبلياً فقط، بدون تعديل السنوات السابقة."
+  ],
+  caseTitle: "شركة طريق الأردن للنقل — الزرقاء",
+  caseText: [
+    "في 1/4/2025 اشترت الشركة شاحنة بتكلفة 60,000 دينار، وأصبحت جاهزة للاستخدام بنفس اليوم.",
+    "• القيمة المتبقية 6,000 دينار.",
+    "• العمر الإنتاجي 5 سنوات، أو 300,000 كم.",
+    "• السنة المالية تنتهي في 31/12.",
+    "• قطعت الشاحنة 50,000 كم خلال 2025.",
+    "• في 1/7/2025 اشترت الشركة رخصة تشغيل خط نقل (أصل غير ملموس) بـ 15,000 دينار لمدة 5 سنوات، بدون قيمة متبقية."
+  ],
+  questions: [
+    {
+      type: "num",
+      q: "بطريقة القسط الثابت، كم مصروف الإهلاك لسنة 2025؟",
+      answer: 8100,
+      why: "الإهلاك السنوي = (60,000 − 6,000) ÷ 5 = 10,800 دينار. الشاحنة استُخدمت 9 أشهر في 2025 (من 1/4 إلى 31/12)، فالإهلاك = 10,800 × 9/12 = 8,100 دينار.",
+      wrong: { "10800": "هذا إهلاك سنة كاملة؛ الشاحنة استُخدمت 9 أشهر فقط في 2025.", "9000": "لم تُطرح القيمة المتبقية: 60,000 × 9/12 ÷ 5 = 9,000. الصحيح يبدأ من 54,000.", "12000": "لم تُطرح القيمة المتبقية ولم تُحتسب الفترة الجزئية.", "2700": "تم احتساب 3 أشهر فقط؛ من 1/4 إلى 31/12 = 9 أشهر." },
+      entry: [
+        { a: "مصروف الإهلاك", dr: 8100 },
+        { a: "مجمع الإهلاك – الشاحنات", cr: 8100 }
+      ]
+    },
+    {
+      type: "mc",
+      q: "لو استخدمت الشركة القسط المتناقص المضاعف (Double-declining)، كم إهلاك 2025؟",
+      options: ["24,000 دينار", "16,200 دينار", "18,000 دينار", "21,600 دينار"],
+      correct: 2,
+      why: "المعدل = 2 ÷ 5 = 40%. هذه الطريقة تُطبَّق على القيمة الدفترية بدون طرح القيمة المتبقية: 60,000 × 40% = 24,000 لسنة كاملة، × 9/12 = 18,000 دينار. القيمة المتبقية تُستخدم فقط حتى لا تنزل القيمة الدفترية تحتها في آخر العمر.",
+      optionWhy: [
+        "هذا إهلاك سنة كاملة؛ لازم يُضرب في 9/12.",
+        "تم طرح القيمة المتبقية أولاً (54,000 × 40% × 9/12). القسط المتناقص يبدأ من التكلفة كاملة.",
+        "",
+        "تم طرح القيمة المتبقية بدون الفترة الجزئية (54,000 × 40%)."
+      ],
+      entry: [
+        { a: "مصروف الإهلاك", dr: 18000 },
+        { a: "مجمع الإهلاك – الشاحنات", cr: 18000 }
+      ]
+    },
+    {
+      type: "num",
+      q: "بطريقة وحدات الإنتاج (حسب الكيلومترات)، كم إهلاك 2025؟",
+      answer: 9000,
+      why: "معدل الكيلومتر = (60,000 − 6,000) ÷ 300,000 = 0.18 دينار. الإهلاك = 50,000 كم × 0.18 = 9,000 دينار. لا يُضرب في 9/12، لأن الكيلومترات تعكس الاستخدام الفعلي.",
+      wrong: { "6750": "تم ضرب الناتج في 9/12؛ في وحدات الإنتاج الاستخدام الفعلي يكفي.", "10000": "لم تُطرح القيمة المتبقية: (60,000 ÷ 300,000) × 50,000 = 10,000." },
+      entry: [
+        { a: "مصروف الإهلاك", dr: 9000 },
+        { a: "مجمع الإهلاك – الشاحنات", cr: 9000 }
+      ]
+    },
+    {
+      type: "num",
+      q: "رخصة التشغيل: كم مصروف الإطفاء لسنة 2025؟",
+      answer: 1500,
+      why: "الرخصة أصل غير ملموس بعمر محدد، فتُطفأ (Amortization) ولا تُهلك: 15,000 ÷ 5 = 3,000 سنوياً، وللفترة من 1/7 إلى 31/12 = 3,000 × 6/12 = 1,500 دينار. الحساب نفسه مثل القسط الثابت؛ الفرق بالاسم والحسابات: «مصروف الإطفاء / مجمع الإطفاء» بدل «مصروف الإهلاك / مجمع الإهلاك».",
+      wrong: { "3000": "هذا إطفاء سنة كاملة؛ الرخصة اشتُريت في 1/7/2025، فالمدة 6 أشهر فقط.", "750": "تم احتساب 3 أشهر؛ من 1/7 إلى 31/12 = 6 أشهر." },
+      entry: [
+        { a: "مصروف الإطفاء", dr: 1500 },
+        { a: "مجمع الإطفاء – رخصة التشغيل", cr: 1500 }
+      ]
+    },
+    {
+      type: "num",
+      q: "رجوعاً للقسط الثابت للشاحنة: في 1/1/2027 قدّرت الشركة أن العمر المتبقي 4 سنوات (من 1/1/2027) وأن القيمة المتبقية أصبحت 3,000 دينار. كم إهلاك 2027؟",
+      answer: 9525,
+      why: "مجمع الإهلاك حتى 31/12/2026 = 8,100 (2025) + 10,800 (2026) = 18,900. القيمة الدفترية = 60,000 − 18,900 = 41,100. الإهلاك الجديد = (41,100 − 3,000) ÷ 4 = 9,525 دينار سنوياً. السنوات السابقة لا تُعدَّل (تغيير تقدير مستقبلي).",
+      wrong: { "14250": "تم توزيع التكلفة كاملة من جديد: (60,000 − 3,000) ÷ 4. الصحيح يبدأ من القيمة الدفترية 41,100.", "8850": "تم اعتبار 2025 سنة كاملة (مجمع 21,600)؛ 2025 كانت 9 أشهر فقط (8,100).", "10275": "لم تُطرح القيمة المتبقية الجديدة: 41,100 ÷ 4." },
+      entry: [
+        { a: "مصروف الإهلاك", dr: 9525 },
+        { a: "مجمع الإهلاك – الشاحنات", cr: 9525 }
+      ]
+    }
+  ],
+  mistake: "نسيان الفترة الجزئية في سنة الشراء (للإهلاك والإطفاء)، وطرح القيمة المتبقية في أول سنة بالقسط المتناقص. واستخدام «مجمع الإهلاك» لأصل غير ملموس بدل «مجمع الإطفاء». وفي تغيير التقدير: إعادة احتساب السنوات السابقة بدل البدء من القيمة الدفترية الحالية."
+},
+{
+  id: "ias38",
+  related: [{ id: "ias36", text: "اختبار انخفاض القيمة السنوي للأصول غير محددة العمر: IAS 36" }, { id: "dep", text: "تدريب على حساب الإطفاء: الإهلاك والإطفاء" }],
+  code: "IAS 38",
+  title: "الأصول غير الملموسة",
+  en: "Intangible Assets",
+  color: "pink",
+  idea: [
+    "أصل غير نقدي بدون وجود مادي، قابل للتحديد (يمكن فصله أو ناتج عن حق تعاقدي/قانوني)، تسيطر عليه المنشأة ويُتوقع منه منافع مستقبلية.",
+    "البحث (Research) مصروف دائماً. التطوير (Development) يُرسمل فقط بعد تحقق الشروط الستة: الجدوى الفنية، النية للإكمال، القدرة على الاستخدام أو البيع، المنافع المستقبلية، توفر الموارد، القياس الموثوق.",
+    "عمر محدد ← إطفاء (Amortization). عمر غير محدد ← لا إطفاء، بل اختبار انخفاض قيمة سنوي (IAS 36)."
+  ],
+  caseTitle: "شركة برمجيات البتراء — عمّان (2025)",
+  caseText: [
+    "الشركة تطوّر تطبيق محاسبة للمحلات الصغيرة:",
+    "• كانون الثاني–آذار: بحث أولي واستكشاف أفكار 18,000 دينار.",
+    "• من 1/4 تحققت الشروط الستة كلها. نيسان–كانون الأول: تطوير (رواتب مبرمجين واختبار) 72,000 دينار.",
+    "• إعلان إطلاق التطبيق 5,000، وتدريب فريق المبيعات 4,000.",
+    "• التطبيق جاهز للاستخدام 1/1/2026: عمر متوقع 4 سنوات، بدون قيمة متبقية.",
+    "• اشترت الشركة علامة تجارية بمبلغ 40,000 دينار، تُجدَّد بتكلفة رمزية ولا يوجد حد متوقع لاستخدامها (عمر غير محدد)."
+  ],
+  questions: [
+    {
+      type: "num",
+      q: "كم المبلغ الذي يُرسمل كأصل غير ملموس (تكاليف التطوير) في 2025؟",
+      answer: 72000,
+      why: "فقط تكاليف التطوير بعد تحقق الشروط الستة تُرسمل = 72,000 دينار. البحث (18,000) والإعلان (5,000) والتدريب (4,000) كلها مصروفات.",
+      wrong: { "90000": "تمت رسملة البحث (18,000)؛ البحث مصروف دائماً.", "99000": "تمت رسملة كل شيء؛ فقط التطوير بعد تحقق الشروط يُرسمل.", "81000": "الإعلان والتدريب مصروفات وليست جزءاً من تكلفة الأصل.", "77000": "الإعلان (5,000) مصروف وليس جزءاً من تكلفة الأصل.", "76000": "التدريب (4,000) مصروف وليس جزءاً من تكلفة الأصل." },
+      entry: [
+        { a: "تكاليف تطوير (أصل غير ملموس)", dr: 72000 },
+        { a: "مصروف البحث", dr: 18000 },
+        { a: "مصروف الإعلان", dr: 5000 },
+        { a: "مصروف التدريب", dr: 4000 },
+        { a: "البنك", cr: 99000 }
+      ]
+    },
+    {
+      type: "num",
+      q: "كم مصروف الإطفاء لتكاليف التطوير في 2026؟",
+      answer: 18000,
+      why: "الإطفاء يبدأ عندما يصبح الأصل جاهزاً للاستخدام (1/1/2026): 72,000 ÷ 4 = 18,000 دينار سنوياً. لا إطفاء في 2025 لأن التطبيق لم يكن جاهزاً.",
+      wrong: { "22500": "تمت رسملة البحث: (72,000 + 18,000) ÷ 4. البحث مصروف.", "13500": "تم احتساب 9 أشهر؛ الإطفاء يبدأ 1/1/2026 لسنة كاملة.", "24750": "تم إطفاء كل التكاليف (99,000)؛ فقط 72,000 أصل." },
+      entry: [
+        { a: "مصروف الإطفاء", dr: 18000 },
+        { a: "مجمع الإطفاء – تكاليف التطوير", cr: 18000 }
+      ]
+    },
+    {
+      type: "mc",
+      q: "في 31/12/2026 كان المبلغ القابل للاسترداد للعلامة التجارية 35,000 دينار. ما القيد الصحيح للعلامة؟",
+      options: [
+        "من حـ/ مصروف الإطفاء 4,000 — إلى حـ/ مجمع الإطفاء 4,000 (على 10 سنوات)",
+        "من حـ/ خسارة انخفاض القيمة 5,000 — إلى حـ/ العلامة التجارية 5,000",
+        "لا يوجد قيد، الأصل غير المحدد العمر لا يُمس",
+        "من حـ/ مصروف الإطفاء 1,000 — إلى حـ/ مجمع الإطفاء 1,000 (على 40 سنة)"
+      ],
+      correct: 1,
+      why: "عمر غير محدد = لا إطفاء. لكن يُختبر انخفاض القيمة سنوياً: القيمة الدفترية 40,000 > المبلغ القابل للاسترداد 35,000، فالخسارة = 5,000 دينار في قائمة الدخل.",
+      optionWhy: [
+        "الأصل غير المحدد العمر لا يُطفأ أبداً، ولا يُفترض له عمر (مثل 10 سنوات).",
+        "",
+        "لا إطفاء صحيح، لكن اختبار انخفاض القيمة إلزامي سنوياً، والقيمة انخفضت فعلاً.",
+        "الأصل غير المحدد العمر لا يُطفأ أبداً، ولا يُفترض له عمر (مثل 40 سنة)."
+      ],
+      entry: [
+        { a: "خسارة انخفاض القيمة", dr: 5000 },
+        { a: "العلامة التجارية (أو مجمع خسائر الانخفاض)", cr: 5000 }
+      ]
+    }
+  ],
+  mistake: "رسملة البحث أو رسملة التطوير قبل تحقق الشروط الستة. وإطفاء الأصل غير المحدد العمر بدل اختبار انخفاض قيمته سنوياً."
+},
+{
+  id: "ias36",
+  code: "IAS 36",
+  title: "انخفاض قيمة الأصول",
+  en: "Impairment of Assets",
+  color: "pink",
+  related: [{ id: "ias16", text: "الأصول الملموسة — IAS 16" }, { id: "ias38", text: "الأصول غير الملموسة — IAS 38" }],
+  idea: [
+    "يُختبر الأصل عند وجود مؤشر انخفاض، وسنوياً دائماً للشهرة والأصول غير الملموسة غير محددة العمر.",
+    "المبلغ القابل للاسترداد = الأعلى بين: القيمة العادلة ناقص تكاليف الاستبعاد (FVLCD) والقيمة قيد الاستخدام (VIU). الخسارة = القيمة الدفترية − المبلغ القابل للاسترداد (إذا كانت موجبة).",
+    "بعد الخسارة: الإهلاك على القيمة الدفترية الجديدة للعمر المتبقي. عكس الخسارة مسموح بحد القيمة الدفترية لو لم تُسجَّل خسارة، ما عدا الشهرة (Goodwill)."
+  ],
+  caseTitle: "مطبعة الكرك الحديثة",
+  caseText: [
+    "اشترت المطبعة آلة طباعة في 1/1/2022 بتكلفة 120,000 دينار، عمر 10 سنوات، بدون قيمة متبقية، قسط ثابت (12,000 سنوياً).",
+    "في 31/12/2025 ظهرت آلات أحدث في السوق (مؤشر انخفاض):",
+    "• القيمة العادلة للآلة 50,000 دينار، وتكاليف بيعها 2,000 دينار.",
+    "• القيمة الحالية للتدفقات النقدية المتوقعة من استخدامها (VIU) = 54,000 دينار.",
+    "• العمر المتبقي لم يتغير: 6 سنوات."
+  ],
+  questions: [
+    {
+      type: "num",
+      q: "كم خسارة انخفاض القيمة في 31/12/2025؟",
+      answer: 18000,
+      why: "القيمة الدفترية = 120,000 − (12,000 × 4) = 72,000. FVLCD = 50,000 − 2,000 = 48,000، وVIU = 54,000. المبلغ القابل للاسترداد هو الأعلى = 54,000. الخسارة = 72,000 − 54,000 = 18,000 دينار في قائمة الدخل.",
+      wrong: { "24000": "تم أخذ الأقل (48,000)؛ المبلغ القابل للاسترداد هو الأعلى بين FVLCD وVIU.", "22000": "تم استخدام القيمة العادلة بدون طرح تكاليف البيع، وهي أيضاً ليست الأعلى (VIU = 54,000).", "66000": "لم يُطرح مجمع الإهلاك: القيمة الدفترية 72,000 وليست 120,000.", "30000": "تم احتساب 3 سنوات إهلاك فقط؛ من 2022 إلى 2025 = 4 سنوات." },
+      entry: [
+        { a: "خسارة انخفاض القيمة", dr: 18000 },
+        { a: "مجمع خسائر الانخفاض – الآلات", cr: 18000 }
+      ]
+    },
+    {
+      type: "num",
+      q: "كم مصروف الإهلاك لسنة 2026 بعد تسجيل الخسارة؟",
+      answer: 9000,
+      why: "القيمة الدفترية الجديدة 54,000 تُوزَّع على العمر المتبقي 6 سنوات = 9,000 دينار سنوياً (بدل 12,000).",
+      wrong: { "12000": "هذا الإهلاك القديم؛ بعد الخسارة يُعاد احتساب الإهلاك على القيمة الدفترية الجديدة 54,000.", "8000": "تم استخدام FVLCD (48,000)؛ القيمة الدفترية الجديدة = المبلغ القابل للاسترداد 54,000.", "5400": "تم القسمة على 10 سنوات؛ العمر المتبقي 6 سنوات." },
+      entry: [
+        { a: "مصروف الإهلاك", dr: 9000 },
+        { a: "مجمع الإهلاك – الآلات", cr: 9000 }
+      ]
+    },
+    {
+      type: "mc",
+      q: "في 31/12/2027 ارتفع المبلغ القابل للاسترداد إلى 50,000 دينار. كم مبلغ عكس خسارة الانخفاض؟",
+      options: ["14,000 دينار", "12,000 دينار", "18,000 دينار (كامل الخسارة)", "لا يجوز عكس خسارة الانخفاض"],
+      correct: 1,
+      why: "القيمة الدفترية الحالية = 54,000 − (9,000 × 2) = 36,000. السقف = القيمة الدفترية لو لم تُسجَّل خسارة = 120,000 − (12,000 × 6) = 48,000. العكس = 48,000 − 36,000 = 12,000 دينار (وليس حتى 50,000)، ويُسجَّل ربحاً في قائمة الدخل.",
+      optionWhy: [
+        "50,000 − 36,000 = 14,000 يتجاوز السقف: لا يجوز أن تزيد القيمة الدفترية عن 48,000 (القيمة لو لم تُسجَّل خسارة).",
+        "",
+        "العكس محدود بالسقف (48,000)، وليس كامل الخسارة الأصلية.",
+        "العكس ممنوع للشهرة فقط؛ للآلات وباقي الأصول مسموح."
+      ],
+      entry: [
+        { a: "مجمع خسائر الانخفاض – الآلات", dr: 12000 },
+        { a: "عكس خسارة انخفاض القيمة (قائمة الدخل)", cr: 12000 }
+      ]
+    }
+  ],
+  mistake: "أخذ الأقل بين FVLCD وVIU بدل الأعلى. ونسيان إعادة احتساب الإهلاك بعد الخسارة على القيمة الدفترية الجديدة والعمر المتبقي."
+},
+{
+  id: "incremental",
+  code: "قرارات",
+  title: "التكلفة الإضافية (التفاضلية)",
+  en: "Incremental / Differential cost",
+  color: "aqua",
+  idea: [
+    "ليست معياراً دولياً (IFRS)، بل أداة من المحاسبة الإدارية لاتخاذ القرار (Incremental analysis).",
+    "الملائم للقرار: الإيرادات والتكاليف المستقبلية التي تختلف بين البدائل (Relevant). غير الملائم: التكاليف الغارقة (Sunk) والتكاليف الثابتة التي لا تتغير بالقرار.",
+    "القرار: البديل الذي يعطي ربحاً إضافياً أعلى أو تكلفة أقل، مع مراعاة الطاقة المتاحة والعوامل النوعية."
+  ],
+  caseTitle: "مصنع حلويات السلط — علب معمول",
+  caseText: [
+    "الطاقة الإنتاجية 10,000 علبة شهرياً، والإنتاج الحالي 8,000 علبة. سعر البيع العادي 6 دنانير للعلبة.",
+    "تكلفة العلبة: مواد مباشرة 2.00 + أجور مباشرة 1.00 + تكاليف صناعية متغيرة 0.50 + تكاليف ثابتة محمّلة 1.00 (إجمالي الثابت 8,000 دينار شهرياً) = 4.50 دينار.",
+    "• طلبية خاصة: فندق يطلب 1,500 علبة بسعر 4 دنانير، وتحتاج تغليفاً خاصاً بـ 0.20 للعلبة. ستُستخدم قوالب تزيين اشتراها المصنع العام الماضي بـ 300 دينار.",
+    "• الكراتين: المصنع ينتج 8,000 كرتونة شهرياً بتكلفة متغيرة 0.50 للكرتونة + ثابت محمّل 2,000 دينار، منها 800 راتب مشرف آلة الكراتين يُلغى عند الشراء. مورّد يعرض الكرتونة بـ 0.55.",
+    "• خط «كعك بالتمر»: مبيعات 12,000، تكاليف متغيرة 7,500، تكاليف ثابتة محمّلة 6,000 (منها 2,000 عامل خاص بالخط يُستغنى عنه عند الإيقاف، و4,000 حصة من إيجار المصنع لا تتغير). الخط يظهر بخسارة 1,500."
+  ],
+  questions: [
+    {
+      type: "mc",
+      q: "طلبية الفندق (1,500 علبة بـ 4 دنانير): ما القرار، وكم الربح أو الخسارة الإضافية؟",
+      options: [
+        "رفض — لأن السعر أقل من سعر البيع العادي 6 دنانير",
+        "رفض — خسارة إضافية 1,050 دينار",
+        "قبول — ربح إضافي 450 دينار",
+        "قبول — ربح إضافي 150 دينار"
+      ],
+      correct: 2,
+      why: "الطاقة متاحة (2,000 علبة فائضة)، فالتكاليف الثابتة لا تتغير وهي غير ملائمة. الإيراد الإضافي = 1,500 × 4 = 6,000. التكلفة الإضافية = 1,500 × (2.00 + 1.00 + 0.50 + 0.20) = 5,550. الربح الإضافي = 450 دينار ← قبول. القوالب (300) تكلفة غارقة دُفعت سابقاً.",
+      optionWhy: [
+        "المقارنة تكون مع التكلفة الإضافية (3.70)، وليست مع سعر البيع العادي. السعر 4 يغطي التكلفة الإضافية ويزيد.",
+        "تم إدخال التكلفة الثابتة المحمّلة (1.00): 1,500 × (4 − 4.70). مع وجود طاقة فائضة الثابت لا يتغير.",
+        "",
+        "تم طرح القوالب (300)، وهي تكلفة غارقة دُفعت العام الماضي ولا تتغير بالقرار."
+      ],
+      table: [
+        ["الإيراد الإضافي (1,500 × 4)", 6000],
+        ["مواد + أجور + متغيرة (1,500 × 3.50)", -5250],
+        ["تغليف خاص (1,500 × 0.20)", -300],
+        ["الربح الإضافي", 450]
+      ]
+    },
+    {
+      type: "num",
+      q: "الكراتين: كم الفرق الشهري لصالح الشراء من المورّد؟ (رقم موجب = الشراء أوفر)",
+      answer: 400,
+      why: "تكلفة الصنع الملائمة = 8,000 × 0.50 + 800 (راتب المشرف، ثابت يمكن تجنبه) = 4,800. تكلفة الشراء = 8,000 × 0.55 = 4,400. الشراء أوفر بـ 400 دينار شهرياً. باقي الثابت (1,200) يستمر في الحالتين، فهو غير ملائم.",
+      wrong: { "1600": "تم إدخال كل التكاليف الثابتة المحمّلة (2,000)؛ فقط 800 تُلغى عند الشراء، والـ 1,200 الباقية تستمر.", "-400": "لم يُحتسب راتب المشرف (800)، وهو يُلغى عند الشراء فهو تكلفة ملائمة." },
+      table: [
+        ["صنع: تكاليف متغيرة (8,000 × 0.50)", 4000],
+        ["صنع: راتب المشرف (يُلغى عند الشراء)", 800],
+        ["تكلفة الصنع الملائمة", 4800],
+        ["تكلفة الشراء (8,000 × 0.55)", 4400],
+        ["الفرق لصالح الشراء", 400]
+      ]
+    },
+    {
+      type: "mc",
+      q: "خط «كعك بالتمر» يظهر بخسارة 1,500. ما القرار؟",
+      options: [
+        "إيقاف الخط — يوفر خسارة 1,500 دينار",
+        "إيقاف الخط — يرفع الربح 2,000 دينار",
+        "الإبقاء على الخط — إيقافه يخفض الربح 2,500 دينار",
+        "الإبقاء على الخط — إيقافه يخفض الربح 4,500 دينار"
+      ],
+      correct: 2,
+      why: "عند الإيقاف: نخسر هامش المساهمة 12,000 − 7,500 = 4,500، ونوفر فقط الثابت الممكن تجنبه 2,000. صافي الأثر = انخفاض الربح 2,500 دينار ← الإبقاء. الإيجار المحمّل (4,000) يستمر في الحالتين.",
+      optionWhy: [
+        "الخسارة 1,500 تشمل إيجاراً محمّلاً (4,000) لا يختفي بالإيقاف؛ سيتحمله باقي المصنع.",
+        "التوفير 2,000 صحيح، لكن يقابله فقدان هامش مساهمة 4,500.",
+        "",
+        "تم نسيان التوفير في راتب العامل (2,000) الذي يُستغنى عنه عند الإيقاف."
+      ],
+      table: [
+        ["هامش مساهمة مفقود (12,000 − 7,500)", -4500],
+        ["ثابت يمكن تجنبه (عامل الخط)", 2000],
+        ["أثر الإيقاف على الربح", -2500]
+      ]
+    }
+  ],
+  mistake: "إدخال التكاليف الثابتة المحمّلة أو التكاليف الغارقة في التحليل. الملائم فقط: ما يختلف بين البدائل في المستقبل."
+}
+];
+
+</script>
+<script>
+/* English text for each topic (same order and numbers as the Arabic). Fields not listed here stay as in the Arabic data. */
+window.TOPICS_EN = {
+ "framework": {
+  "title": "Conceptual Framework",
+  "sub": "Objective, qualitative characteristics and elements",
+  "idea": [
+   "Objective: to provide financial information that is useful to investors, lenders and other creditors in making decisions (the objective of general purpose financial reporting).",
+   "Fundamental qualitative characteristics: relevance and faithful representation. Enhancing characteristics: comparability, verifiability, timeliness and understandability.",
+   "The five elements: assets, liabilities, equity, income and expenses."
+  ],
+  "caseTitle": "Noor Furniture Co. — Amman",
+  "caseText": [
+   "Noor Furniture is preparing its financial statements for 2026. During the year:",
+   "• The company applies the same accounting policies every year, so investors can compare 2025 with 2026.",
+   "• It received JD 2,000 in cash in advance from a customer for tables to be delivered next month.",
+   "• The auditor wants to be sure the figures depict reality as it is: complete, neutral and free from error."
+  ],
+  "questions": [
+   {
+    "q": "Applying the same policies every year so investors can compare 2025 with 2026 achieves which qualitative characteristic?",
+    "options": [
+     "Relevance",
+     "Comparability",
+     "Timeliness",
+     "Verifiability"
+    ],
+    "why": "Comparability is an enhancing characteristic: it lets users compare an entity with itself over time and with other entities. Consistency in applying policies is a means of achieving it.",
+    "optionWhy": [
+     "Relevance means the information can make a difference to decisions (predictive or confirmatory value); it is not about comparing years.",
+     "",
+     "Timeliness means information is available before it loses its capacity to influence decisions.",
+     "Verifiability means different independent observers could reach broadly the same conclusion."
+    ]
+   },
+   {
+    "q": "How is the JD 2,000 received in advance from the customer classified when it is received?",
+    "options": [
+     "Income",
+     "An asset only, with no liability",
+     "A liability",
+     "Equity"
+    ],
+    "why": "A liability is a present obligation of the entity to transfer an economic resource as a result of past events. The company must deliver the tables (or refund the money), so the amount is a contract liability until the tables are delivered; only then does it become revenue.",
+    "optionWhy": [
+     "The revenue has not been earned yet, because the tables have not been delivered.",
+     "Cash has increased (an asset), but it is matched by an obligation to deliver, and the entry must balance.",
+     "",
+     "Equity comes from owners and profits; the customer is not an owner."
+    ],
+    "entry": [
+     "Cash",
+     "Unearned revenue (contract liability)"
+    ]
+   },
+   {
+    "q": "The auditor asked for the figures to be complete, neutral and free from error. Which characteristic is this, and what type is it?",
+    "options": [
+     "Verifiability — enhancing",
+     "Reliability — fundamental",
+     "Faithful representation — fundamental",
+     "Understandability — enhancing"
+    ],
+    "why": "Faithful representation is a fundamental characteristic. Its three components are: complete, neutral and free from error.",
+    "optionWhy": [
+     "Verifiability is an enhancing characteristic meaning independent observers agree; completeness, neutrality and freedom from error are the components of faithful representation.",
+     "“Reliability” is an old term; it was replaced by “faithful representation” in the 2010 Framework.",
+     "",
+     "Understandability means presenting information clearly; it is not about completeness and neutrality."
+    ]
+   }
+  ],
+  "mistake": "Writing “reliability” as a fundamental characteristic — it was replaced by “faithful representation” in 2010. Also confusing the fundamental characteristics (relevance, faithful representation) with the enhancing ones (comparability, verifiability, timeliness, understandability)."
+ },
+ "ias2": {
+  "title": "Inventories",
+  "sub": "Cost formulas and net realisable value",
+  "idea": [
+   "Inventories are measured at the lower of cost and net realisable value (NRV).",
+   "Cost = purchase price + non-refundable import duties + freight-in and all other costs of bringing the inventories to their present location and condition. Excluded: storage after arrival, selling costs and administrative overheads.",
+   "Permitted cost formulas: first-in, first-out (FIFO) and weighted average cost. LIFO is not permitted."
+  ],
+  "caseTitle": "Al-Reem Electronics — Irbid (January 2026, periodic inventory system)",
+  "caseText": [
+   "• 1 Jan: opening inventory 100 chargers × JD 20 = JD 2,000.",
+   "• 10 Jan: purchased 300 chargers: price 6,600 + freight-in 450 + non-refundable customs duties 150 + warehouse storage after arrival 120.",
+   "• 20 Jan: purchased 200 chargers × JD 27 = JD 5,400.",
+   "• Sales during the month: 450 chargers. Remaining at month-end: 150 chargers.",
+   "• 31 Jan: expected selling price JD 26 per charger, and selling costs JD 3 per charger."
+  ],
+  "questions": [
+   {
+    "q": "What is the cost of the 10 Jan purchase recognised in inventory?",
+    "why": "Cost = 6,600 + 450 freight-in + 150 non-refundable customs duties = JD 7,200, i.e. JD 24 per charger. Storage after the goods arrive (120) is a period expense and is not part of cost.",
+    "wrong": {
+     "6600": "The purchase price alone is not enough; freight-in and non-refundable duties are part of cost.",
+     "7050": "Non-refundable customs duties are part of cost.",
+     "7320": "Storage after arrival (120) was added; it is a period expense, not part of the cost of inventories."
+    },
+    "entry": [
+     "Inventory",
+     "Storage expense",
+     "Bank / Accounts payable"
+    ]
+   },
+   {
+    "q": "Using the weighted average method (periodic), what is the value of closing inventory (150 chargers)?",
+    "why": "Cost of goods available for sale = 2,000 + 7,200 + 5,400 = JD 14,600 for 600 chargers. Average = 14,600 ÷ 600 = JD 24.33. Closing inventory = 150 × 14,600 ÷ 600 = JD 3,650, and cost of goods sold = 14,600 − 3,650 = JD 10,950.",
+    "wrong": {
+     "3550": "This is a simple average of the prices (20+24+27)÷3; a quantity-weighted average is required.",
+     "3600": "Only 24 was used; the weighted average covers all batches: 14,600 ÷ 600 = 24.33.",
+     "3680": "Most likely the storage (120) was included in cost: 150 × 14,720 ÷ 600.",
+     "10950": "This is the cost of goods sold (450 chargers); the question asks for closing inventory (150 chargers)."
+    }
+   },
+   {
+    "q": "Using FIFO, closing inventory = 150 × 27 = JD 4,050. What is the entry to write it down to net realisable value (NRV)?",
+    "options": [
+     "No entry, because the selling price of 26 is above cost",
+     "Dr Inventory write-down loss 600 — Cr Inventory 600",
+     "Dr Inventory write-down loss 450 — Cr Inventory 450",
+     "Dr Inventory 600 — Cr Inventory revaluation gain 600"
+    ],
+    "why": "Net realisable value = (26 − 3) × 150 = JD 3,450. Cost (FIFO) = JD 4,050. The lower is 3,450, so the write-down = 4,050 − 3,450 = JD 600, recognised as an expense in the same period. (Some textbooks include it in cost of goods sold; the amount is the same.)",
+    "optionWhy": [
+     "The comparison is with net realisable value (selling price − selling costs = 23), not with the selling price.",
+     "",
+     "450 = 150 × 3 (selling costs only). Correct: 4,050 − 3,450 = 600.",
+     "Wrong direction: inventory is written down, and never written up above cost."
+    ],
+    "entry": [
+     "Inventory write-down loss",
+     "Inventory"
+    ]
+   }
+  ],
+  "mistake": "Comparing cost with the selling price instead of net realisable value (selling price − estimated costs of completion and sale). And including storage after arrival or selling costs in the cost of inventories."
+ },
+ "ias16": {
+  "title": "Property, Plant and Equipment",
+  "sub": "Tangible assets — cost, revaluation, derecognition",
+  "related": [
+   "If there is an indication that the machine is impaired: Impairment of Assets — IAS 36"
+  ],
+  "idea": [
+   "An asset is recognised at cost: purchase price after trade discounts + non-refundable taxes + all costs directly attributable to bringing it to working condition (delivery, installation, testing).",
+   "After recognition: the cost model or the revaluation model (applied to the entire class). Day-to-day servicing is an expense; a subsequent cost that brings future economic benefits is capitalised.",
+   "On derecognition: gain or loss = disposal proceeds − carrying amount."
+  ],
+  "caseTitle": "Northern Olive Factory — Jerash",
+  "caseText": [
+   "On 1 January 2024 the factory bought an olive press machine:",
+   "• List price JD 50,000, trade discount 10%.",
+   "• Sales tax 16% = JD 7,200 (recoverable from the tax department).",
+   "• Non-refundable customs duties 2,000 — delivery 1,500 — installation 2,500 — trial run and testing 1,000.",
+   "• Training staff to use the machine JD 800.",
+   "Useful life 10 years, residual (scrap) value JD 2,000, straight-line method."
+  ],
+  "questions": [
+   {
+    "q": "What cost is recognised for the machine on 1 January 2024?",
+    "why": "50,000 − 10% discount = 45,000 + customs duties 2,000 + delivery 1,500 + installation 2,500 + testing 1,000 = JD 52,000. The recoverable sales tax is excluded (it is recovered), and training (800) is an expense.",
+    "wrong": {
+     "52800": "Training (800) was added; it is an expense, not a cost of getting the machine ready for use.",
+     "57000": "The trade discount (5,000) was not deducted.",
+     "59200": "The recoverable sales tax (7,200) was added; recoverable taxes are not part of cost.",
+     "60000": "Both the recoverable sales tax and training were added; neither is included."
+    },
+    "entry": [
+     "Machinery",
+     "Recoverable sales tax (receivable)",
+     "Training expense",
+     "Bank"
+    ]
+   },
+   {
+    "q": "In 2025 the factory paid JD 4,500 to add a unit that increases the machine's production capacity by 30%, and JD 1,200 for an oil change and routine parts. What is the entry?",
+    "options": [
+     "Dr Maintenance expense 5,700 — Cr Bank 5,700",
+     "Dr Machinery 5,700 — Cr Bank 5,700",
+     "Dr Machinery 4,500 + Dr Maintenance expense 1,200 — Cr Bank 5,700",
+     "Dr Machinery 1,200 + Dr Maintenance expense 4,500 — Cr Bank 5,700"
+    ],
+    "why": "An addition that increases production capacity brings future economic benefits, so it is capitalised to the asset (subsequent cost). Day-to-day servicing keeps the asset as it is, so it is an expense.",
+    "optionWhy": [
+     "The addition (4,500) increases production capacity, so it is capitalised, not expensed.",
+     "Routine servicing (1,200) brings no new benefits, so it is an expense, not an asset cost.",
+     "",
+     "The amounts are reversed: it is the 4,500 addition that is capitalised."
+    ],
+    "entry": [
+     "Machinery",
+     "Maintenance expense",
+     "Bank"
+    ]
+   },
+   {
+    "q": "The factory land is carried at a cost of JD 200,000, and the company uses the revaluation model. On 31 December 2025 its fair value became JD 260,000 (first revaluation). What is the entry?",
+    "options": [
+     "Dr Land 60,000 — Cr Revaluation gain (profit or loss) 60,000",
+     "Dr Land 60,000 — Cr Revaluation surplus (other comprehensive income) 60,000",
+     "No entry; land always stays at cost",
+     "Dr Land 260,000 — Cr Revaluation surplus 260,000"
+    ],
+    "why": "A revaluation increase is recognised in other comprehensive income and accumulated in equity as a “revaluation surplus”. It goes to profit or loss only to the extent that it reverses a previous decrease recognised as a loss. A decrease (with no prior surplus) is recognised as a loss in profit or loss.",
+    "optionWhy": [
+     "A first increase does not go through profit or loss; it goes to other comprehensive income (revaluation surplus).",
+     "",
+     "The company chose the revaluation model, so the land is carried at fair value.",
+     "Only the difference (260,000 − 200,000 = 60,000) is recorded; the original cost is already on the books."
+    ],
+    "entry": [
+     "Land",
+     "Revaluation surplus (equity)"
+    ]
+   },
+   {
+    "q": "Separate question (ignore the 2025 addition): the machine was sold on 1 July 2027 for JD 36,000 cash. What is the gain on sale?",
+    "why": "Annual depreciation = (52,000 − 2,000) ÷ 10 = JD 5,000. From 1 January 2024 to 30 June 2027 = 3.5 years, so accumulated depreciation = JD 17,500. Carrying amount = 52,000 − 17,500 = 34,500. Gain = 36,000 − 34,500 = JD 1,500. (Depreciation for the first half of 2027 = 2,500 is recorded first, before the disposal entry.)",
+    "wrong": {
+     "4000": "4 full years were charged; the sale was in mid-2027 = 3.5 years.",
+     "-1000": "Depreciation for half of 2027 (2,500) was not charged: accumulated depreciation to the date of sale is 17,500, not 15,000.",
+     "-16000": "Accumulated depreciation was not deducted from cost; carrying amount = 52,000 − 17,500."
+    },
+    "entry": [
+     "Bank",
+     "Accumulated depreciation – machinery",
+     "Machinery",
+     "Gain on sale of machinery"
+    ]
+   }
+  ],
+  "mistake": "Including recoverable sales tax or training in the cost of the asset. And forgetting depreciation for the part-period up to the date of sale before calculating the gain or loss on disposal."
+ },
+ "dep": {
+  "title": "Depreciation & Amortisation",
+  "sub": "Straight-line, declining balance, units of production",
+  "idea": [
+   "One idea, two names: allocating (cost − residual value) over the useful life. Depreciation is for tangible assets; amortisation is for intangible assets with finite useful lives.",
+   "Methods: straight-line, declining balance and units of production. The method reflects the pattern in which the asset's future economic benefits are consumed.",
+   "A change in useful life or residual value is a change in accounting estimate (IAS 8): applied prospectively only, with no restatement of prior years."
+  ],
+  "caseTitle": "Jordan Road Transport Co. — Zarqa",
+  "caseText": [
+   "On 1 April 2025 the company bought a truck costing JD 60,000; it was available for use the same day.",
+   "• Residual value JD 6,000.",
+   "• Useful life 5 years, or 300,000 km.",
+   "• The financial year ends on 31 December.",
+   "• The truck was driven 50,000 km during 2025.",
+   "• On 1 July 2025 the company bought a transport route operating licence (an intangible asset) for JD 15,000 for 5 years, with no residual value."
+  ],
+  "questions": [
+   {
+    "q": "Using the straight-line method, what is depreciation expense for 2025?",
+    "why": "Annual depreciation = (60,000 − 6,000) ÷ 5 = JD 10,800. The truck was used for 9 months in 2025 (1 April to 31 December), so depreciation = 10,800 × 9/12 = JD 8,100.",
+    "wrong": {
+     "2700": "Only 3 months were counted; 1 April to 31 December = 9 months.",
+     "9000": "Residual value was not deducted: 60,000 × 9/12 ÷ 5 = 9,000. The correct base is 54,000.",
+     "10800": "This is a full year's depreciation; the truck was used for only 9 months in 2025.",
+     "12000": "Residual value was not deducted and the part-period was ignored."
+    },
+    "entry": [
+     "Depreciation expense",
+     "Accumulated depreciation – trucks"
+    ]
+   },
+   {
+    "q": "If the company used the double-declining balance method, what is depreciation for 2025?",
+    "options": [
+     "JD 24,000",
+     "JD 16,200",
+     "JD 18,000",
+     "JD 21,600"
+    ],
+    "why": "Rate = 2 ÷ 5 = 40%. This method is applied to the carrying amount without deducting residual value: 60,000 × 40% = 24,000 for a full year, × 9/12 = JD 18,000. Residual value is used only so that the carrying amount does not fall below it at the end of the asset's life.",
+    "optionWhy": [
+     "This is a full year's depreciation; it must be multiplied by 9/12.",
+     "Residual value was deducted first (54,000 × 40% × 9/12). Declining balance starts from the full cost.",
+     "",
+     "Residual value was deducted and the part-period was ignored (54,000 × 40%)."
+    ],
+    "entry": [
+     "Depreciation expense",
+     "Accumulated depreciation – trucks"
+    ]
+   },
+   {
+    "q": "Using the units-of-production method (based on kilometres), what is depreciation for 2025?",
+    "why": "Rate per km = (60,000 − 6,000) ÷ 300,000 = JD 0.18. Depreciation = 50,000 km × 0.18 = JD 9,000. It is not multiplied by 9/12, because kilometres reflect actual use.",
+    "wrong": {
+     "6750": "The result was multiplied by 9/12; under units of production, actual usage is enough.",
+     "10000": "Residual value was not deducted: (60,000 ÷ 300,000) × 50,000 = 10,000."
+    },
+    "entry": [
+     "Depreciation expense",
+     "Accumulated depreciation – trucks"
+    ]
+   },
+   {
+    "q": "Operating licence: what is amortisation expense for 2025?",
+    "why": "The licence is an intangible asset with a finite useful life, so it is amortised, not depreciated: 15,000 ÷ 5 = 3,000 a year, and for 1 July to 31 December = 3,000 × 6/12 = JD 1,500. The calculation is the same as straight-line; the difference is the name and the accounts: “amortisation expense / accumulated amortisation” instead of “depreciation expense / accumulated depreciation”.",
+    "wrong": {
+     "750": "3 months were counted; 1 July to 31 December = 6 months.",
+     "3000": "This is a full year's amortisation; the licence was bought on 1 July 2025, so only 6 months apply."
+    },
+    "entry": [
+     "Amortisation expense",
+     "Accumulated amortisation – operating licence"
+    ]
+   },
+   {
+    "q": "Back to straight-line for the truck: on 1 January 2027 the company estimated the remaining useful life at 4 years (from 1 January 2027) and the residual value at JD 3,000. What is depreciation for 2027?",
+    "why": "Accumulated depreciation to 31 December 2026 = 8,100 (2025) + 10,800 (2026) = 18,900. Carrying amount = 60,000 − 18,900 = 41,100. New depreciation = (41,100 − 3,000) ÷ 4 = JD 9,525 a year. Prior years are not restated (a prospective change in estimate).",
+    "wrong": {
+     "8850": "2025 was treated as a full year (accumulated 21,600); 2025 was only 9 months (8,100).",
+     "10275": "The new residual value was not deducted: 41,100 ÷ 4.",
+     "14250": "The full cost was reallocated: (60,000 − 3,000) ÷ 4. The correct starting point is the carrying amount of 41,100."
+    },
+    "entry": [
+     "Depreciation expense",
+     "Accumulated depreciation – trucks"
+    ]
+   }
+  ],
+  "mistake": "Forgetting the part-period in the year of purchase (for depreciation and amortisation), and deducting residual value in the first year under declining balance. Using “accumulated depreciation” for an intangible asset instead of “accumulated amortisation”. And for a change in estimate: recalculating prior years instead of starting from the current carrying amount."
+ },
+ "ias38": {
+  "title": "Intangible Assets",
+  "sub": "Research vs development, amortisation, indefinite lives",
+  "related": [
+   "Annual impairment test for intangible assets with indefinite useful lives: IAS 36",
+   "Practise calculating amortisation: Depreciation & Amortisation"
+  ],
+  "idea": [
+   "An identifiable non-monetary asset without physical substance (separable, or arising from contractual or other legal rights), controlled by the entity and expected to generate future economic benefits.",
+   "Research is always an expense. Development is capitalised only once all six criteria are met: technical feasibility, intention to complete, ability to use or sell, probable future economic benefits, availability of resources, and reliable measurement.",
+   "Finite useful life → amortisation. Indefinite useful life → no amortisation, but an annual impairment test (IAS 36)."
+  ],
+  "caseTitle": "Petra Software Co. — Amman (2025)",
+  "caseText": [
+   "The company is developing an accounting app for small shops:",
+   "• January–March: initial research and exploring ideas JD 18,000.",
+   "• From 1 April all six criteria were met. April–December: development (programmers' salaries and testing) JD 72,000.",
+   "• Advertising the app launch 5,000, and training the sales team 4,000.",
+   "• The app was available for use on 1 January 2026: expected useful life 4 years, no residual value.",
+   "• The company bought a trademark for JD 40,000; it is renewable at negligible cost and there is no foreseeable limit to its use (indefinite useful life)."
+  ],
+  "questions": [
+   {
+    "q": "What amount is capitalised as an intangible asset (development costs) in 2025?",
+    "why": "Only development costs incurred after the six criteria are met are capitalised = JD 72,000. Research (18,000), advertising (5,000) and training (4,000) are all expenses.",
+    "wrong": {
+     "76000": "Training (4,000) is an expense, not part of the asset's cost.",
+     "77000": "Advertising (5,000) is an expense, not part of the asset's cost.",
+     "81000": "Advertising and training are expenses, not part of the asset's cost.",
+     "90000": "Research (18,000) was capitalised; research is always an expense.",
+     "99000": "Everything was capitalised; only development after the criteria are met is capitalised."
+    },
+    "entry": [
+     "Development costs (intangible asset)",
+     "Research expense",
+     "Advertising expense",
+     "Training expense",
+     "Bank"
+    ]
+   },
+   {
+    "q": "What is the amortisation expense for development costs in 2026?",
+    "why": "Amortisation begins when the asset is available for use (1 January 2026): 72,000 ÷ 4 = JD 18,000 a year. There is no amortisation in 2025 because the app was not yet available for use.",
+    "wrong": {
+     "13500": "9 months were charged; amortisation starts on 1 January 2026 for a full year.",
+     "22500": "Research was capitalised: (72,000 + 18,000) ÷ 4. Research is an expense.",
+     "24750": "All the costs (99,000) were amortised; only 72,000 is an asset."
+    },
+    "entry": [
+     "Amortisation expense",
+     "Accumulated amortisation – development costs"
+    ]
+   },
+   {
+    "q": "On 31 December 2026 the trademark's recoverable amount was JD 35,000. What is the correct entry for the trademark?",
+    "options": [
+     "Dr Amortisation expense 4,000 — Cr Accumulated amortisation 4,000 (over 10 years)",
+     "Dr Impairment loss 5,000 — Cr Trademark 5,000",
+     "No entry; an indefinite-life asset is left untouched",
+     "Dr Amortisation expense 1,000 — Cr Accumulated amortisation 1,000 (over 40 years)"
+    ],
+    "why": "Indefinite useful life = no amortisation. But it is tested for impairment annually: carrying amount 40,000 > recoverable amount 35,000, so the impairment loss = JD 5,000 in profit or loss.",
+    "optionWhy": [
+     "An indefinite-life asset is never amortised, and no useful life (such as 10 years) is assumed for it.",
+     "",
+     "No amortisation is right, but the annual impairment test is mandatory, and the value has actually fallen.",
+     "An indefinite-life asset is never amortised, and no useful life (such as 40 years) is assumed for it."
+    ],
+    "entry": [
+     "Impairment loss",
+     "Trademark (or accumulated impairment losses)"
+    ]
+   }
+  ],
+  "mistake": "Capitalising research, or capitalising development before all six criteria are met. And amortising an indefinite-life asset instead of testing it for impairment annually."
+ },
+ "ias36": {
+  "title": "Impairment of Assets",
+  "sub": "Carrying amount vs recoverable amount",
+  "related": [
+   "Property, Plant and Equipment — IAS 16",
+   "Intangible Assets — IAS 38"
+  ],
+  "idea": [
+   "An asset is tested when there is an indication of impairment — and always annually for goodwill and intangible assets with indefinite useful lives.",
+   "Recoverable amount = the higher of fair value less costs of disposal (FVLCD) and value in use (VIU). Impairment loss = carrying amount − recoverable amount (if positive).",
+   "After the loss: depreciation is based on the new carrying amount over the remaining useful life. A reversal is allowed up to the carrying amount that would have been determined had no loss been recognised — except for goodwill."
+  ],
+  "caseTitle": "Al-Karak Modern Printing Press",
+  "caseText": [
+   "The press bought a printing machine on 1 January 2022 for JD 120,000, useful life 10 years, no residual value, straight-line (12,000 a year).",
+   "On 31 December 2025 newer machines appeared on the market (an indication of impairment):",
+   "• The machine's fair value is JD 50,000, and the costs of selling it are JD 2,000.",
+   "• The present value of the cash flows expected from using it (VIU) = JD 54,000.",
+   "• The remaining useful life is unchanged: 6 years."
+  ],
+  "questions": [
+   {
+    "q": "What is the impairment loss on 31 December 2025?",
+    "why": "Carrying amount = 120,000 − (12,000 × 4) = 72,000. FVLCD = 50,000 − 2,000 = 48,000, and VIU = 54,000. The recoverable amount is the higher = 54,000. Loss = 72,000 − 54,000 = JD 18,000 in profit or loss.",
+    "wrong": {
+     "22000": "Fair value was used without deducting costs of disposal, and it is not the higher amount anyway (VIU = 54,000).",
+     "24000": "The lower amount (48,000) was used; recoverable amount is the higher of FVLCD and VIU.",
+     "30000": "Only 3 years of depreciation were charged; 2022 to 2025 = 4 years.",
+     "66000": "Accumulated depreciation was not deducted: the carrying amount is 72,000, not 120,000."
+    },
+    "entry": [
+     "Impairment loss",
+     "Accumulated impairment losses – machinery"
+    ]
+   },
+   {
+    "q": "What is depreciation expense for 2026 after the loss is recognised?",
+    "why": "The new carrying amount of 54,000 is spread over the remaining 6 years = JD 9,000 a year (instead of 12,000).",
+    "wrong": {
+     "5400": "It was divided by 10 years; the remaining useful life is 6 years.",
+     "8000": "FVLCD (48,000) was used; the new carrying amount = the recoverable amount of 54,000.",
+     "12000": "This is the old depreciation; after the loss, depreciation is recalculated on the new carrying amount of 54,000."
+    },
+    "entry": [
+     "Depreciation expense",
+     "Accumulated depreciation – machinery"
+    ]
+   },
+   {
+    "q": "On 31 December 2027 the recoverable amount rose to JD 50,000. How much of the impairment loss is reversed?",
+    "options": [
+     "JD 14,000",
+     "JD 12,000",
+     "JD 18,000 (the whole loss)",
+     "An impairment loss may not be reversed"
+    ],
+    "why": "Current carrying amount = 54,000 − (9,000 × 2) = 36,000. Ceiling = carrying amount had no loss been recognised = 120,000 − (12,000 × 6) = 48,000. Reversal = 48,000 − 36,000 = JD 12,000 (not up to 50,000), recognised as a gain in profit or loss.",
+    "optionWhy": [
+     "50,000 − 36,000 = 14,000 exceeds the ceiling: the carrying amount may not rise above 48,000 (its amount had no loss been recognised).",
+     "",
+     "The reversal is limited by the ceiling (48,000), not by the full original loss.",
+     "Reversal is prohibited only for goodwill; for machinery and other assets it is allowed."
+    ],
+    "entry": [
+     "Accumulated impairment losses – machinery",
+     "Reversal of impairment loss (profit or loss)"
+    ]
+   }
+  ],
+  "mistake": "Taking the lower of FVLCD and VIU instead of the higher. And forgetting to recalculate depreciation after the loss using the new carrying amount and the remaining useful life."
+ },
+ "incremental": {
+  "code": "Decisions",
+  "title": "Incremental (Differential) Cost",
+  "sub": "Relevant costing for business decisions",
+  "idea": [
+   "Not an IFRS standard, but a management accounting tool for decision-making (incremental analysis).",
+   "Relevant to the decision: future revenues and costs that differ between the alternatives. Irrelevant: sunk costs and fixed costs that do not change with the decision.",
+   "The decision: the alternative that gives the higher incremental profit or the lower cost, taking into account available capacity and qualitative factors."
+  ],
+  "caseTitle": "Salt Sweets Factory — ma'amoul boxes",
+  "caseText": [
+   "Production capacity is 10,000 boxes a month, and current output is 8,000 boxes. The normal selling price is JD 6 a box.",
+   "Cost per box: direct materials 2.00 + direct labour 1.00 + variable manufacturing overhead 0.50 + allocated fixed overhead 1.00 (total fixed costs JD 8,000 a month) = JD 4.50.",
+   "• Special order: a hotel wants 1,500 boxes at JD 4, requiring special packaging at 0.20 a box. Decorating moulds the factory bought last year for JD 300 will be used.",
+   "• Cartons: the factory makes 8,000 cartons a month at a variable cost of 0.50 per carton + allocated fixed costs of JD 2,000, of which 800 is the salary of the carton-machine supervisor, which is eliminated if the cartons are bought in. A supplier offers cartons at 0.55 each.",
+   "• “Date ka'ak” line: sales 12,000, variable costs 7,500, allocated fixed costs 6,000 (of which 2,000 is a worker dedicated to the line who is let go if it is dropped, and 4,000 is a share of factory rent that does not change). The line shows a loss of 1,500."
+  ],
+  "questions": [
+   {
+    "q": "Hotel order (1,500 boxes at JD 4): what is the decision, and what is the incremental profit or loss?",
+    "options": [
+     "Reject — the price is below the normal selling price of JD 6",
+     "Reject — incremental loss of JD 1,050",
+     "Accept — incremental profit of JD 450",
+     "Accept — incremental profit of JD 150"
+    ],
+    "why": "Capacity is available (2,000 spare boxes), so fixed costs do not change and are irrelevant. Incremental revenue = 1,500 × 4 = 6,000. Incremental cost = 1,500 × (2.00 + 1.00 + 0.50 + 0.20) = 5,550. Incremental profit = JD 450 → accept. The moulds (300) are a sunk cost paid earlier.",
+    "optionWhy": [
+     "The comparison is with the incremental cost (3.70), not the normal selling price. A price of 4 covers the incremental cost and more.",
+     "The allocated fixed cost (1.00) was included: 1,500 × (4 − 4.70). With spare capacity, fixed costs do not change.",
+     "",
+     "The moulds (300) were deducted; they are a sunk cost paid last year that does not change with the decision."
+    ],
+    "table": [
+     "Incremental revenue (1,500 × 4)",
+     "Materials + labour + variable overhead (1,500 × 3.50)",
+     "Special packaging (1,500 × 0.20)",
+     "Incremental profit"
+    ]
+   },
+   {
+    "q": "Cartons: what is the monthly difference in favour of buying from the supplier? (positive number = buying is cheaper)",
+    "why": "Relevant cost to make = 8,000 × 0.50 + 800 (supervisor's salary, an avoidable fixed cost) = 4,800. Cost to buy = 8,000 × 0.55 = 4,400. Buying is cheaper by JD 400 a month. The remaining fixed costs (1,200) continue either way, so they are irrelevant.",
+    "wrong": {
+     "1600": "All the allocated fixed costs (2,000) were included; only 800 is eliminated by buying, and the remaining 1,200 continues.",
+     "-400": "The supervisor's salary (800) was left out; it is eliminated by buying, so it is a relevant cost."
+    },
+    "table": [
+     "Make: variable costs (8,000 × 0.50)",
+     "Make: supervisor's salary (eliminated if bought)",
+     "Relevant cost to make",
+     "Cost to buy (8,000 × 0.55)",
+     "Difference in favour of buying"
+    ]
+   },
+   {
+    "q": "The “date ka'ak” line shows a loss of 1,500. What is the decision?",
+    "options": [
+     "Drop the line — it saves a loss of JD 1,500",
+     "Drop the line — it raises profit by JD 2,000",
+     "Keep the line — dropping it reduces profit by JD 2,500",
+     "Keep the line — dropping it reduces profit by JD 4,500"
+    ],
+    "why": "If the line is dropped: we lose the contribution margin of 12,000 − 7,500 = 4,500, and save only the avoidable fixed cost of 2,000. Net effect = profit falls by JD 2,500 → keep the line. The allocated rent (4,000) continues either way.",
+    "optionWhy": [
+     "The 1,500 loss includes allocated rent (4,000) that does not disappear if the line is dropped; the rest of the factory will bear it.",
+     "The 2,000 saving is right, but it is offset by losing a contribution margin of 4,500.",
+     "",
+     "The saving on the line worker's salary (2,000), who is let go when the line is dropped, was forgotten."
+    ],
+    "table": [
+     "Lost contribution margin (12,000 − 7,500)",
+     "Avoidable fixed cost (line worker)",
+     "Effect of dropping the line on profit"
+    ]
+   }
+  ],
+  "mistake": "Including allocated fixed costs or sunk costs in the analysis. Only what differs between the alternatives in the future is relevant."
+ }
+};
+</script>
+<script>
+(function(){
+"use strict";
+var TOPICS_AR = window.TOPICS || [];
+var TOPICS_EN = window.TOPICS_EN || {};
+var KEY = "almadina-standards-practice-v1";
+var LANG_KEY = "almadina-standards-lang";
+var app = document.getElementById("app");
+var lang = "ar";
+try { if (localStorage.getItem(LANG_KEY) === "en") lang = "en"; } catch(e){}
+
+/* نصوص الواجهة باللغتين */
+var UI = {
+  ar: {
+    title: "المعايير الدولية", sub: "تدرّب على المعايير المحاسبية",
+    docHome: "المعايير الدولية — تدرّب على المعايير المحاسبية", docSuffix: " — المعايير الدولية",
+    toggle: "English", toggleAria: "Switch to English", toggleTitle: "اللغة",
+    heroH: "تدرّب على المعيار",
+    heroP: "تدريب عملي بدل الحفظ: كل موضوع فيه الفكرة باختصار، حالة بأرقام حقيقية، وأسئلة قيود ومبالغ بتصحيح فوري.",
+    steps: ["الفكرة بـ 3 سطور", "حالة عملية", "أسئلة بتصحيح فوري", "الغلطة الشائعة بالامتحان"],
+    overall: "التقدم الكلي", topics: "المواضيع",
+    notStarted: "لم يبدأ", going: "قيد التدريب", done: "مكتمل ✓",
+    qs: " أسئلة", correctN: " صحيحة",
+    back: "→ قائمة المواضيع", idea: "الفكرة الأساسية", caseH: "الحالة العملية", questions: "الأسئلة",
+    mistake: "⚠️ الغلطة الشائعة بالامتحان", related: "مواضيع مرتبطة", relArrow: "←",
+    reset: "إعادة تدريب هذا الموضوع", next: "الموضوع التالي: ", nextArrow: " ←", home: "العودة لقائمة المواضيع",
+    score: "النتيجة", allRight: "ممتاز، كل الإجابات صحيحة.", retry: "إعادة التدريب متاحة لتثبيت الفكرة.",
+    qOf: function(i, n){ return "سؤال " + i + " من " + n; },
+    amount: "المبلغ", amountAria: "المبلغ بالدينار", check: "التحقق",
+    hint: "إدخال المبلغ بالأرقام فقط، مثل 7200 أو 7,200",
+    ok: "✓ إجابة صحيحة", no: "✗ إجابة غير صحيحة", whyWrong: "سبب الخطأ: ", correctAns: "الإجابة الصحيحة: ",
+    whereFrom: function(v){ return "من أين جاء " + v + "؟ "; },
+    money: function(v){ return v + " دينار"; },
+    reason: "السبب: ", entryTitle: "القيد الصحيح كاملاً", colAcc: "البيان", colDr: "مدين", colCr: "دائن",
+    tableTitle: "التحليل (بالدينار)",
+    letters: ["أ","ب","ج","د","هـ","و"]
+  },
+  en: {
+    title: "International Standards", sub: "Practise the accounting standards",
+    docHome: "International Standards — Practise IFRS & IAS", docSuffix: " — International Standards",
+    toggle: "عربي", toggleAria: "التبديل إلى العربية", toggleTitle: "Language",
+    heroH: "Practise the standard",
+    heroP: "Hands-on practice instead of memorising: each topic gives you the key idea in brief, a case with real numbers, and journal-entry and amount questions with instant feedback.",
+    steps: ["The idea in 3 lines", "A practical case", "Questions with instant feedback", "The common exam mistake"],
+    overall: "Overall progress", topics: "Topics",
+    notStarted: "Not started", going: "In progress", done: "Completed ✓",
+    qs: " questions", correctN: " correct",
+    back: "← All topics", idea: "Key idea", caseH: "Practical case", questions: "Questions",
+    mistake: "⚠️ The common exam mistake", related: "Related topics", relArrow: "→",
+    reset: "Retake this topic", next: "Next topic: ", nextArrow: " →", home: "Back to all topics",
+    score: "Score", allRight: "Excellent — every answer is correct.", retry: "You can retake the topic to lock in the idea.",
+    qOf: function(i, n){ return "Question " + i + " of " + n; },
+    amount: "Amount", amountAria: "Amount in JD", check: "Check",
+    hint: "Enter the amount in figures only, e.g. 7200 or 7,200",
+    ok: "✓ Correct", no: "✗ Incorrect", whyWrong: "Why it's wrong: ", correctAns: "Correct answer: ",
+    whereFrom: function(v){ return "Where does " + v + " come from? "; },
+    money: function(v){ return "JD\u00a0" + v; },
+    reason: "Explanation: ", entryTitle: "The full correct journal entry", colAcc: "Account", colDr: "Debit", colCr: "Credit",
+    tableTitle: "Analysis (JD)",
+    letters: ["A","B","C","D","E","F"]
+  }
+};
+function U(){ return UI[lang]; }
+
+/* يبني نسخة إنجليزية من كل موضوع: النصوص من TOPICS_EN، والأرقام والإجابات من البيانات العربية نفسها */
+function localize(t){
+  var e = TOPICS_EN[t.id];
+  if (lang !== "en" || !e) return t;
+  var c = {};
+  for (var k in t) c[k] = t[k];
+  ["code","title","caseTitle","mistake"].forEach(function(k){ if (e[k]) c[k] = e[k]; });
+  c.en = e.sub || "";
+  if (e.idea) c.idea = e.idea;
+  if (e.caseText) c.caseText = e.caseText;
+  if (t.related && e.related) c.related = t.related.map(function(r, i){ return {id: r.id, text: e.related[i] || r.text}; });
+  c.questions = t.questions.map(function(q, i){
+    var eq = (e.questions || [])[i] || {}, n = {};
+    for (var k in q) n[k] = q[k];
+    if (eq.q) n.q = eq.q;
+    if (eq.why) n.why = eq.why;
+    if (eq.options) n.options = eq.options;
+    if (eq.optionWhy) n.optionWhy = eq.optionWhy;
+    if (eq.wrong) n.wrong = eq.wrong;
+    if (q.entry && eq.entry) n.entry = q.entry.map(function(x, j){ var y = {}; for (var k in x) y[k] = x[k]; if (eq.entry[j]) y.a = eq.entry[j]; return y; });
+    if (q.table && eq.table) n.table = q.table.map(function(r, j){ return [eq.table[j] || r[0], r[1]]; });
+    return n;
+  });
+  return c;
+}
+var TOPICS = [];
+function applyLang(){
+  TOPICS = TOPICS_AR.map(localize);
+  var u = U(), root = document.documentElement;
+  root.setAttribute("lang", lang);
+  root.setAttribute("dir", lang === "en" ? "ltr" : "rtl");
+  document.getElementById("brandTitle").textContent = u.title;
+  document.getElementById("brandSub").textContent = u.sub;
+  document.getElementById("langLabel").textContent = u.toggle;
+  var tb = document.getElementById("langToggle");
+  tb.setAttribute("aria-label", u.toggleAria);
+  tb.setAttribute("title", u.toggleTitle);
+  document.getElementById("langLabel").setAttribute("lang", lang === "en" ? "ar" : "en");
+}
+
+function load(){ try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e){ return {}; } }
+function save(s){ try { localStorage.setItem(KEY, JSON.stringify(s)); } catch(e){} }
+var state = load();
+
+function fmt(n){
+  var neg = n < 0, a = Math.abs(n);
+  var s = a.toLocaleString("en-US", {maximumFractionDigits: 2});
+  return neg ? "(" + s + ")" : s;
+}
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+/* أي تعبير حسابي (أرقام وعمليات) يُعرض من اليسار لليمين داخل النص العربي */
+var MATH = /[\d(][\d,.\s×÷+\-−=%\/()]*[\d)%]/g;
+function rich(s){
+  return esc(s).replace(MATH, function(m){
+    var pre = "", post = "";
+    var cnt = function(x, c){ return x.split(c).length - 1; };
+    while (m.charAt(m.length - 1) === ")" && cnt(m, ")") > cnt(m, "(")) { post = ")" + post; m = m.slice(0, -1); }
+    while (m.charAt(0) === "(" && cnt(m, "(") > cnt(m, ")")) { pre += "("; m = m.slice(1); }
+    m = m.replace(/\s+$/, function(sp){ post = sp + post; return ""; });
+    if (!/[×÷+\-−=%\/,()]/.test(m.replace(/^\d+$/, ""))) return pre + m + post;
+    return pre + '<bdi dir="ltr" class="m">' + m + '</bdi>' + post;
+  });
+}
+function parseAmount(raw){
+  var s = String(raw).trim()
+    .replace(/[\u0660-\u0669]/g, function(d){ return d.charCodeAt(0) - 0x0660; })
+    .replace(/[\u06F0-\u06F9]/g, function(d){ return d.charCodeAt(0) - 0x06F0; })
+    .replace(/[٬,\s]/g, "").replace(/٫/g, ".").replace(/[−–]/g, "-")
+    .replace(/دينار|JOD|JD/gi, "");
+  if (!/^-?\d+(\.\d+)?$/.test(s)) return null;
+  return parseFloat(s);
+}
+function topicStats(t){
+  var rec = state[t.id] || {}, answered = 0, right = 0;
+  t.questions.forEach(function(q, i){ if (rec[i]) { answered++; if (rec[i].ok) right++; } });
+  return {answered: answered, right: right, total: t.questions.length};
+}
+function statusChip(st){
+  if (st.answered === 0) return '<span class="chip">' + U().notStarted + '</span>';
+  if (st.answered < st.total) return '<span class="chip going">' + U().going + '</span>';
+  return '<span class="chip done">' + U().done + '</span>';
+}
+function progRow(st){
+  var pct = st.total ? Math.round(st.answered / st.total * 100) : 0;
+  return '<div class="tc-prog"><div class="bar"><i style="width:' + pct + '%"></i></div><span class="num">' +
+    st.answered + '/' + st.total + U().qs + (st.answered ? ' · ' + st.right + U().correctN : '') + '</span></div>';
+}
+
+/* ---------- Home ---------- */
+function renderHome(){
+  var tot = 0, ans = 0, right = 0;
+  TOPICS.forEach(function(t){ var s = topicStats(t); tot += s.total; ans += s.answered; right += s.right; });
+  var pct = tot ? Math.round(ans / tot * 100) : 0;
+  var u = U();
+  var h = '<section class="glass hero">' +
+    '<h2>' + u.heroH + '</h2>' +
+    '<p>' + u.heroP + '</p>' +
+    '<ul class="steps">' + u.steps.map(function(s){ return '<li>' + s + '</li>'; }).join("") + '</ul>' +
+    '<div class="overall"><span>' + u.overall + '</span><div class="bar"><i style="width:' + pct + '%"></i></div><span class="num">' + ans + '/' + tot + '</span></div>' +
+    '</section>' +
+    '<div class="section-label">' + u.topics + '</div><div class="grid">';
+  TOPICS.forEach(function(t){
+    var st = topicStats(t);
+    h += '<a class="topic-card ' + (t.color || "violet") + '" href="#/t/' + t.id + '">' +
+      '<div class="tc-top"><span class="badge">' + esc(t.code) + '</span>' + statusChip(st) + '</div>' +
+      '<div class="tc-title">' + esc(t.title) + '</div>' +
+      '<div class="tc-en">' + esc(t.en) + '</div>' + progRow(st) + '</a>';
+  });
+  h += '</div>';
+  app.innerHTML = h;
+  document.title = u.docHome;
+}
+
+/* ---------- Entry / table ---------- */
+function entryHTML(entry){
+  var drs = entry.filter(function(e){ return e.dr; }), crs = entry.filter(function(e){ return e.cr; });
+  var rows = "", u = U(), en = lang === "en";
+  if (drs.length > 1 && !en) rows += '<tr><td class="sub">من مذكورين</td><td class="n"></td><td class="n"></td></tr>';
+  drs.forEach(function(e){
+    rows += '<tr><td>' + (en ? '' : (drs.length > 1 ? 'حـ/ ' : 'من حـ/ ')) + esc(e.a) + '</td><td class="n">' + fmt(e.dr) + '</td><td class="n"></td></tr>';
+  });
+  if (crs.length > 1 && !en) rows += '<tr><td class="sub cr-acc">إلى مذكورين</td><td class="n"></td><td class="n"></td></tr>';
+  crs.forEach(function(e){
+    rows += '<tr><td class="cr-acc">' + (en ? '' : (crs.length > 1 ? 'حـ/ ' : 'إلى حـ/ ')) + esc(e.a) + '</td><td class="n"></td><td class="n">' + fmt(e.cr) + '</td></tr>';
+  });
+  return '<div class="entry-title">' + u.entryTitle + '</div><table class="entry"><thead><tr><th>' + u.colAcc + '</th><th class="n">' + u.colDr + '</th><th class="n">' + u.colCr + '</th></tr></thead><tbody>' + rows + '</tbody></table>';
+}
+function tableHTML(rows){
+  var h = '<div class="entry-title">' + U().tableTitle + '</div><table class="entry"><tbody>';
+  rows.forEach(function(r, i){
+    h += '<tr' + (i === rows.length - 1 ? ' class="total"' : '') + '><td>' + esc(r[0]) + '</td><td class="n">' + fmt(r[1]) + '</td></tr>';
+  });
+  return h + '</tbody></table>';
+}
+
+/* ---------- Topic ---------- */
+function renderTopic(id){
+  var idx = -1;
+  TOPICS.forEach(function(t, i){ if (t.id === id) idx = i; });
+  if (idx < 0) { location.hash = "#/"; return; }
+  var t = TOPICS[idx], st = topicStats(t), u = U();
+  var h = '<a class="back" href="#/">' + u.back + '</a>' +
+    '<section class="glass t-head"><span class="badge">' + esc(t.code) + '</span>' +
+    '<h2>' + esc(t.title) + '</h2><div class="en">' + esc(t.en) + '</div><div id="tprog">' + progRow(st) + '</div></section>' +
+    '<section class="glass card"><h3><span class="dot">1</span>' + u.idea + '</h3><ul class="idea">' +
+    t.idea.map(function(l){ return '<li>' + rich(l) + '</li>'; }).join("") + '</ul></section>' +
+    '<section class="glass card case"><h3><span class="dot">2</span>' + u.caseH + '</h3><div class="case-title">' + rich(t.caseTitle) + '</div>' +
+    t.caseText.map(function(p){ return '<p>' + rich(p) + '</p>'; }).join("") + '</section>' +
+    '<div class="section-label">' + u.questions + '</div>';
+  t.questions.forEach(function(q, i){ h += '<section class="glass q" id="q' + i + '"></section>'; });
+  h += '<section class="mistake"><h3>' + u.mistake + '</h3><p>' + rich(t.mistake) + '</p></section>' +
+    (t.related && t.related.length ? '<section class="glass card related"><h3>' + u.related + '</h3>' + t.related.map(function(r){ return '<a class="rel" href="#/t/' + r.id + '">' + rich(r.text) + ' <span aria-hidden="true">' + u.relArrow + '</span></a>'; }).join("") + '</section>' : '') +
+    '<div id="score"></div>' +
+    '<div class="t-foot"><button class="btn ghost" id="reset">' + u.reset + '</button>' +
+    (TOPICS[idx + 1] ? '<a class="btn" style="display:inline-flex;align-items:center" href="#/t/' + TOPICS[idx + 1].id + '">' + u.next + esc(TOPICS[idx + 1].title.split(" — ")[0]) + u.nextArrow + '</a>'
+                     : '<a class="btn" style="display:inline-flex;align-items:center" href="#/">' + u.home + '</a>') + '</div>';
+  app.innerHTML = h;
+  document.title = t.title + u.docSuffix;
+  t.questions.forEach(function(q, i){ renderQuestion(t, q, i); });
+  updateScore(t);
+  document.getElementById("reset").onclick = function(){
+    delete state[t.id]; save(state); renderTopic(t.id); window.scrollTo(0, 0);
+  };
+}
+
+function updateScore(t){
+  var st = topicStats(t);
+  document.getElementById("tprog").innerHTML = progRow(st);
+  var el = document.getElementById("score");
+  if (st.answered === st.total) {
+    el.innerHTML = '<section class="glass score"><div>' + U().score + '</div><b class="num">' + st.right + ' / ' + st.total + '</b><div style="font-size:13px;color:#64748b">' +
+      (st.right === st.total ? U().allRight : U().retry) + '</div></section>';
+  } else el.innerHTML = "";
+}
+
+function renderQuestion(t, q, i){
+  var box = document.getElementById("q" + i);
+  var rec = (state[t.id] || {})[i];
+  var u = U(), LETTERS = u.letters;
+  var h = '<div class="q-n">' + u.qOf(i + 1, t.questions.length) + '</div><p class="q-text">' + rich(q.q) + '</p>';
+  if (q.type === "mc") {
+    h += '<div class="opts">';
+    q.options.forEach(function(o, j){
+      var cls = "";
+      if (rec) { if (j === q.correct) cls = " right"; else if (j === rec.v) cls = " wrong"; else cls = " dim"; }
+      h += '<button class="opt' + cls + '" data-j="' + j + '"' + (rec ? " disabled" : "") + '><span class="k">' + LETTERS[j] + '</span><span>' + rich(o) + '</span></button>';
+    });
+    h += '</div>';
+  } else {
+    h += '<div class="num-row"><label><input type="text" inputmode="decimal" autocomplete="off" placeholder="' + u.amount + '" aria-label="' + u.amountAria + '"' +
+      (rec ? ' value="' + esc(fmt(rec.v)) + '" disabled' : '') + '><span class="unit">JOD</span></label>' +
+      '<button class="btn check"' + (rec ? " disabled" : "") + '>' + u.check + '</button></div><div class="hint"></div>';
+  }
+  if (rec) h += feedbackHTML(q, rec);
+  box.innerHTML = h;
+  if (rec) return;
+  if (q.type === "mc") {
+    box.querySelectorAll(".opt").forEach(function(b){
+      b.onclick = function(){ answer(t, q, i, +b.getAttribute("data-j")); };
+    });
+  } else {
+    var inp = box.querySelector("input"), btn = box.querySelector(".check"), hint = box.querySelector(".hint");
+    var go = function(){
+      var v = parseAmount(inp.value);
+      if (v === null) { hint.textContent = u.hint; inp.focus(); return; }
+      answer(t, q, i, v);
+    };
+    btn.onclick = go;
+    inp.onkeydown = function(e){ if (e.key === "Enter") go(); };
+  }
+}
+
+function answer(t, q, i, v){
+  var ok = q.type === "mc" ? v === q.correct : Math.abs(v - q.answer) < 0.5;
+  state[t.id] = state[t.id] || {};
+  state[t.id][i] = {v: v, ok: ok};
+  save(state);
+  renderQuestion(t, q, i);
+  updateScore(t);
+  var fb = document.querySelector("#q" + i + " .fb");
+  if (fb && fb.getBoundingClientRect().bottom > window.innerHeight) fb.scrollIntoView({behavior: "smooth", block: "nearest"});
+}
+
+function feedbackHTML(q, rec){
+  var u = U(), LETTERS = u.letters;
+  var h = '<div class="fb ' + (rec.ok ? "ok" : "no") + '">';
+  if (rec.ok) {
+    h += '<div class="fb-head">' + u.ok + '</div>';
+  } else {
+    h += '<div class="fb-head">' + u.no + '</div>';
+    if (q.type === "mc") {
+      if (q.optionWhy && q.optionWhy[rec.v]) h += '<p><span class="your">' + u.whyWrong + '</span>' + rich(q.optionWhy[rec.v]) + '</p>';
+      h += '<p>' + u.correctAns + '<span class="correct-val">' + LETTERS[q.correct] + ') ' + rich(q.options[q.correct]) + '</span></p>';
+    } else {
+      var key = Object.keys(q.wrong || {}).filter(function(k){ return Math.abs(+k - rec.v) < 0.5; })[0];
+      if (key) h += '<p><span class="your">' + u.whereFrom(fmt(rec.v)) + '</span>' + rich(q.wrong[key]) + '</p>';
+      h += '<p>' + u.correctAns + '<span class="correct-val num">' + u.money(fmt(q.answer)) + '</span></p>';
+    }
+  }
+  h += '<p><span class="your">' + u.reason + '</span>' + rich(q.why) + '</p>';
+  if (q.entry) h += entryHTML(q.entry);
+  if (q.table) h += tableHTML(q.table);
+  return h + '</div>';
+}
+
+/* ---------- Router ---------- */
+function route(){
+  var m = location.hash.match(/^#\/t\/([\w-]+)/);
+  if (m) renderTopic(m[1]); else renderHome();
+  window.scrollTo(0, 0);
+}
+window.addEventListener("hashchange", route);
+document.getElementById("langToggle").onclick = function(){
+  lang = lang === "en" ? "ar" : "en";
+  try { localStorage.setItem(LANG_KEY, lang); } catch(e){}
+  applyLang();
+  var y = window.scrollY;
+  var m = location.hash.match(/^#\/t\/([\w-]+)/);
+  if (m) renderTopic(m[1]); else renderHome();
+  window.scrollTo(0, y);
+};
+applyLang();
+route();
+})();
+
+</script>
+</body>
+</html>
